@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1560 300" xmlns="http://www.w3.org/2000/svg">
+      <rect x="15" y="30" width="440" height="220" rx="18" fill="#f6f5f2" stroke="#e8e6e1" stroke-width="2.5"/>
+      <rect x="381" y="50" width="46" height="54" rx="6" fill="#fff" stroke="#c2600a" stroke-width="3"/>
+      <path d="M389 68 h30 M389 84 h30 M404 60 v38" stroke="#e8a96b" stroke-width="2.5"/>
+      <text x="45" y="78" font-size="17" fill="#8a8580" font-weight="700" letter-spacing="2">1 · ENTRADA</text>
+      <text x="45" y="120" font-size="27" fill="#1A1918" font-weight="800">Os dados</text>
+      <text x="45" y="158" font-size="20.5" fill="#2a2724">planilha, relatório, extrato —</text>
+      <text x="45" y="186" font-size="20.5" fill="#2a2724">texto ou números</text>
+      <text x="45" y="222" font-size="19" fill="#c2600a" font-weight="700">ele coleta — ou você deixa na pasta</text>
+      <path d="M470 140 h60" stroke="#e8790c" stroke-width="5" stroke-linecap="round"/>
+      <path d="M538 140 l-16 -11 v22 z" fill="#e8790c"/>
+      <rect x="555" y="30" width="440" height="220" rx="18" fill="#fdeedd" stroke="#e8790c" stroke-width="2.5"/>
+      <g stroke="#c2600a" stroke-width="3.5" stroke-linecap="round">
+        <circle cx="948" cy="77" r="14" fill="#fdeedd"/>
+        <path d="M948 56 v7 M948 91 v7 M927 77 h7 M962 77 h7 M933 62 l5 5 M958 87 l5 5 M963 62 l-5 5 M938 87 l-5 5"/>
+      </g>
+      <circle cx="948" cy="77" r="5" fill="#c2600a"/>
+      <text x="585" y="78" font-size="17" fill="#a8480c" font-weight="700" letter-spacing="2">2 · TRANSFORMAÇÃO</text>
+      <text x="585" y="120" font-size="27" fill="#1A1918" font-weight="800">O seu pedido</text>
+      <text x="585" y="158" font-size="20.5" fill="#2a2724">organizar, cruzar, calcular,</text>
+      <text x="585" y="186" font-size="20.5" fill="#2a2724">interpretar</text>
+      <text x="585" y="222" font-size="19" fill="#c2600a" font-weight="700">é o prompt que você escreve</text>
+      <path d="M1010 140 h60" stroke="#e8790c" stroke-width="5" stroke-linecap="round"/>
+      <path d="M1078 140 l-16 -11 v22 z" fill="#e8790c"/>
+      <rect x="1095" y="30" width="440" height="220" rx="18" fill="#c2600a"/>
+      <rect x="1461" y="50" width="46" height="54" rx="6" fill="#fff"/>
+      <rect x="1470" y="84" width="7" height="12" rx="2" fill="#e8a96b"/>
+      <rect x="1481" y="74" width="7" height="22" rx="2" fill="#e8790c"/>
+      <rect x="1492" y="62" width="7" height="34" rx="2" fill="#c2600a"/>
+      <text x="1125" y="78" font-size="17" fill="#fdeedd" font-weight="700" letter-spacing="2">3 · SAÍDA</text>
+      <text x="1125" y="120" font-size="27" fill="#fff" font-weight="800">Como você quer</text>
+      <text x="1125" y="158" font-size="20.5" fill="#fdeedd">resumo, tabela, recomendação —</text>
+      <text x="1125" y="186" font-size="20.5" fill="#fdeedd">no formato que decide rápido</text>
+      <text x="1125" y="222" font-size="19" fill="#ffe2c4" font-weight="700">você define antes, não depois</text>
+    </svg>

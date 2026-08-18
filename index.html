@@ -90,6 +90,12 @@ h1{font-size:clamp(31px,6.5vw,44px); line-height:1.08; margin:0; font-weight:700
 ol.passos{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:8px}
 ol.passos li{font-size:16.5px}
 
+/* Moldura CLARA FIXA: os diagramas vieram do deck com a cor cravada na paleta
+   clara. Sem isso, quem abre no modo escuro ve caixa branca berrante ou texto sumido. */
+.figuras{display:flex; flex-direction:column; gap:14px}
+.figura{margin:0; border:1px solid var(--linha-forte); border-radius:11px; overflow:hidden}
+.figura img{display:block; width:100%; height:auto; background:#fff; padding:10px}
+.figura figcaption{font-size:14.5px; color:var(--tinta-2); padding:11px 15px; background:var(--ground); border-top:1px solid var(--linha)}
 .prompts{display:flex; flex-direction:column; gap:13px}
 .prompt{border:1px solid var(--linha-forte); border-radius:11px; padding:16px 18px; display:flex; flex-direction:column; gap:11px}
 .prompt h4{margin:0; font-size:17px; font-weight:650}
@@ -171,6 +177,7 @@ footer{
         <div class="passos-rot">Como refazer</div>
         <ol class="passos"><li>Confira que você está no <strong>Claude Pro</strong> — é o mínimo pro método do dia (o plano grátis não tem Cowork nem Habilidades).</li><li>Use o <strong>Cowork</strong> no computador. É onde ele trabalha com as suas pastas e arquivos, e é onde a gente passou o dia.</li><li>Guarde a diferença: <strong>consultor</strong> é quando ele só responde; <strong>agente</strong> é quando ele faz. O dia inteiro foi sobre virar a chave do primeiro pro segundo.</li></ol>
         
+        
       </section>
       <section class="degrau" id="degrau-2">
         <div class="degrau-cab">
@@ -183,6 +190,7 @@ footer{
         <div class="resumo"><p>Prompt é só o nome técnico do seu pedido — tudo que você escreve e anexa. A qualidade do que entra decide a qualidade do que sai.</p><p>A receita tem três ingredientes: <strong>o contexto</strong> (quem você é, pra quem é o resultado), <strong>o porquê</strong> (o objetivo, que faz ele decidir melhor) e <strong>o formato</strong> (como você quer receber).</p></div>
         <div class="passos-rot">Como refazer</div>
         <ol class="passos"><li>Antes de pedir, decida <strong>a altura</strong>: você quer ideias, uma proposta fechada ou a execução? Pedir ideia e receber execução é o desencontro mais comum.</li><li>Com preguiça de escrever contexto? <strong>Fale.</strong> No Mac é Caps Lock; no Windows é a tecla Windows + H. Contexto falado sai mais completo do que digitado.</li><li>Se a resposta veio rasa, quase sempre é falta de contexto — não é limite da ferramenta.</li></ol>
+        
         <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
         <div class="prompt">
           <div class="prompt-cab">
@@ -208,6 +216,11 @@ Formato da resposta: [tabela / tópicos / um parágrafo e três ações / o que 
         <div class="resumo"><p>De manhã ele era a Dory: toda conversa começava do zero. Depois deste degrau, <strong>toda conversa nova nasce sabendo quem você é</strong>.</p><p>A ordem é o que muda o resultado: <strong>1. coletar · 2. guardar · 3. pedir</strong>. O pedido é a parte mais fácil e a última. Quem vai direto pro pedido recebe resposta rasa — e acha que a culpa é da IA.</p></div>
         <div class="passos-rot">Como refazer</div>
         <ol class="passos"><li><strong>Coletar</strong> — pelas quatro portas: você escreve, você fala, manda ele pesquisar, ou deixa ele te entrevistar. É aqui que mora o trabalho.</li><li><strong>Guardar</strong> — crie a pasta <strong>“Minha Empresa — IA”</strong> no Google Drive do computador e aponte o Cowork pra ela. É a casa dos seus projetos.</li><li><strong>Pedir</strong> — dois minutos. Feitos o 1 e o 2, o mesmo pedido volta rico, e ainda sugere o que você não tinha pensado.</li><li>Cole o seu perfil em <strong>Configurações → Perfil → Instruções para o Claude</strong> e teste numa conversa nova: <em>“o que você sabe sobre mim?”</em></li></ol>
+        <div class="figuras">
+          <figure class="figura">
+            <img src="img/tela-perfil.jpg" alt="Tela de configurações do Claude, com o campo Instruções para o Claude" loading="lazy">
+            <figcaption>Onde colar o seu perfil: <strong>Configurações → Perfil → Instruções para o Claude</strong>.</figcaption>
+          </figure></div>
         <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
         <div class="prompt">
           <div class="prompt-cab">
@@ -271,6 +284,11 @@ Depois me escreve o prompt de retomada, pra eu colar numa conversa nova e contin
         <div class="resumo"><p>Conector é a tomada: dá a ele acesso às ferramentas que você já usa. Memória é o que ele <em>sabe</em>; conector é onde ele <em>chega</em>.</p><p>Tem mais de quatrocentos na lista. E o que não está na lista também entra — muda só o caminho.</p></div>
         <div class="passos-rot">Como refazer</div>
         <ol class="passos"><li><strong>Gmail e Agenda</strong> — Configurações → Personalizar → Conectores. Ache na lista, clique em Vincular e entre com a sua conta Google.</li><li><strong>Claude in Chrome</strong> — na loja do Chrome busque por Claude e confira que o fornecedor é a <strong>Anthropic</strong>. Adicione, fixe o ícone na barra e entre com a sua conta.</li><li>Teste: abra o painel da sua plataforma no Chrome e pergunte <strong>no Cowork</strong> (não na janelinha da extensão) — a extensão é o olho, quem conversa com você é o Cowork.</li></ol>
+        <div class="figuras">
+          <figure class="figura">
+            <img src="img/tela-conectores.jpg" alt="Tela de conectores do Claude, com Gmail e Google Calendar na lista" loading="lazy">
+            <figcaption><strong>Configurações → Personalizar → Conectores.</strong> Ache na lista e clique em Vincular.</figcaption>
+          </figure></div>
         <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
         <div class="prompt">
           <div class="prompt-cab">
@@ -292,6 +310,15 @@ Depois me escreve o prompt de retomada, pra eu colar numa conversa nova e contin
         <div class="resumo"><p>Habilidade é o funcionário que você treina <strong>uma vez</strong>. Prompt é explicar a tarefa toda santa vez; habilidade é ensinar uma vez e ela executa pra sempre.</p><p>Na prática é um arquivo de texto — um manual que ele segue. Dentro dele: nome · quando usar · instruções · formato da saída. Regra de bolso: <strong>pediu a mesma coisa duas vezes? Vira habilidade.</strong></p></div>
         <div class="passos-rot">Como refazer</div>
         <ol class="passos"><li>Decida <strong>antes de abrir o teclado</strong>: o que ela <strong>recebe</strong>, o que ela <strong>pergunta</strong> quando falta dado, e o que ela <strong>devolve</strong>.</li><li>Crie e dê o nome. A partir daí ele pergunta — prepare as <strong>respostas</strong>, não as perguntas.</li><li>Escreva as instruções: o que ela lê, como cruza, e a <strong>regra de ouro</strong> — nunca inventar número.</li><li>Dê o formato da saída e <strong>um exemplo bom e um ruim</strong>. É o exemplo que separa habilidade boa de habilidade genérica.</li><li>Salve em <strong>Configurações → Capacidades → Habilidades</strong>. Ela fica na sua conta, não na pasta.</li><li>Criou não é congelou: você <strong>edita e melhora</strong> a habilidade na medida que trabalha.</li></ol>
+        <div class="figuras">
+          <figure class="figura">
+            <img src="img/anatomia.svg" alt="Diagrama: entrada, transformação e saída" loading="lazy">
+            <figcaption>Toda tarefa tem a mesma anatomia — e é o esqueleto de qualquer habilidade que você for escrever.</figcaption>
+          </figure>
+          <figure class="figura">
+            <img src="img/tela-capacidades.jpg" alt="Menu de configurações do Claude, com Habilidades na lateral" loading="lazy">
+            <figcaption>A habilidade fica salva em <strong>Configurações → Capacidades → Habilidades</strong> — na sua conta, não na pasta.</figcaption>
+          </figure></div>
         <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
         <div class="prompt">
           <div class="prompt-cab">
@@ -333,6 +360,11 @@ Fale comigo em português de dono, sem jargão. Pode começar me perguntando o q
         <div class="resumo"><p>De manhã você contratou e treinou. Agora é a <strong>primeira semana</strong> dele na sua empresa — e todo funcionário novo tem uma: você conta mais, ele erra, você corrige.</p><p>Quatro caminhos pra continuar: contar mais · dar mais acesso · ensinar mais habilidades · e o mais importante, <strong>perguntar pra ele</strong> o que fazer em seguida.</p></div>
         <div class="passos-rot">Como refazer</div>
         <ol class="passos"><li><strong>Contar mais</strong> — produtos, regras, o que sempre dá errado. O perfil da manhã era só a entrevista de admissão.</li><li><strong>Dar mais acesso</strong> — abra no Chrome o seu marketplace, o seu site, o seu painel de anúncios, e peça pra ele olhar e entender.</li><li><strong>Ensinar mais habilidades</strong> — cada tarefa repetida da sua semana é uma candidata.</li><li><strong>Perguntar</strong> — quando não souber como fazer alguma coisa, pergunte pra ele. É o atalho que a maioria esquece.</li></ol>
+        <div class="figuras">
+          <figure class="figura">
+            <img src="img/onboarding.svg" alt="Diagrama: a manhã foi o onboarding, a tarde ele trabalha" loading="lazy">
+            <figcaption>A manhã do sábado foi o onboarding dele. Daqui pra frente é a primeira semana de trabalho.</figcaption>
+          </figure></div>
         <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
         <div class="prompt">
           <div class="prompt-cab">
@@ -356,6 +388,11 @@ Me dá uma lista, da que mais economiza o meu tempo ou o meu dinheiro pra que me
         <div class="resumo"><p>É sempre o mesmo movimento: você fala, dá memória organizada, conecta mais lugares, ensina mais habilidades. <strong>Cada volta ele te conhece melhor</strong> — e a resposta vem mais bacana.</p><p>O sábado foi uma volta inteira. Você sai com o norte; o resto é praticar todo dia — não tem outro jeito de ficar bom nisso.</p></div>
         <div class="passos-rot">Como refazer</div>
         <ol class="passos"><li><strong>Dado sensível</strong> — senha e cartão, nunca. Dado de cliente, só o necessário.</li><li><strong>Instalação</strong> — plugin e extensão só de quem você conhece.</li><li><strong>Não limite o que ele pode fazer</strong> — os modelos melhoram rápido; o que ele não faz hoje, faz amanhã. Pergunte a ele o que há de novo pro seu caso.</li></ol>
+        <div class="figuras">
+          <figure class="figura">
+            <img src="img/looping.svg" alt="Diagrama do looping: falar, dar memória, conectar, ensinar, ele trabalha, melhorar" loading="lazy">
+            <figcaption>É sempre o mesmo movimento — e cada volta te deixa mais esperto.</figcaption>
+          </figure></div>
         
       </section>
 

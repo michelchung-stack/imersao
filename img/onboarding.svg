@@ -1,0 +1,19 @@
+<svg viewBox="0 0 470 400" xmlns="http://www.w3.org/2000/svg">
+        <rect x="70" y="14" width="330" height="196" rx="16" fill="#fff" stroke="#e8e6e1" stroke-width="2.5"/>
+        <text x="94" y="48" font-size="15" fill="#8a8580" font-weight="700">MANHÃ · ONBOARDING</text>
+        <g font-size="16.5" fill="#1A1918">
+          <circle cx="106" cy="76" r="10" fill="#6BAF8D"/><path d="M101 76 l4 5 8 -9" stroke="#fff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="128" y="82">conhecer quem ele é</text>
+          <circle cx="106" cy="108" r="10" fill="#6BAF8D"/><path d="M101 108 l4 5 8 -9" stroke="#fff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="128" y="114">aprender a conversar</text>
+          <circle cx="106" cy="140" r="10" fill="#6BAF8D"/><path d="M101 140 l4 5 8 -9" stroke="#fff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="128" y="146">apresentar a empresa</text>
+          <circle cx="106" cy="172" r="10" fill="#6BAF8D"/><path d="M101 172 l4 5 8 -9" stroke="#fff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="128" y="178">dar os acessos</text>
+        </g>
+        <path d="M235 214 v44" stroke="#e8790c" stroke-width="5" stroke-linecap="round"/>
+        <path d="M235 266 l-11 -16 h22 z" fill="#e8790c"/>
+        <rect x="70" y="274" width="330" height="86" rx="18" fill="#c2600a"/>
+        <text x="235" y="310" font-size="21" fill="#fff" text-anchor="middle" font-weight="800">TARDE: ELE TRABALHA</text>
+        <text x="235" y="338" font-size="14.5" fill="#fdeedd" text-anchor="middle">tempo · custo · clareza — nas SUAS dores</text>
+      </svg>

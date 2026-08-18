@@ -1,0 +1,13 @@
+<svg viewBox="0 0 470 400" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="235" cy="200" r="118" fill="none" stroke="#e8790c" stroke-width="3.5" stroke-dasharray="10 9"/>
+        <path d="M353 192 l10 16 -19 2 z" fill="#e8790c"/>
+        <path d="M117 210 l-10 -16 19 -2 z" fill="#e8790c"/>
+        <rect x="163" y="30" width="144" height="36" rx="18" fill="#c2600a"/><text x="235" y="54" font-size="17.5" fill="#fff" text-anchor="middle" font-weight="700">falar</text>
+        <rect x="332" y="118" width="128" height="36" rx="18" fill="#f6f5f2" stroke="#e8e6e1" stroke-width="2"/><text x="396" y="142" font-size="17.5" fill="#1A1918" text-anchor="middle" font-weight="700">dar memória</text>
+        <rect x="330" y="252" width="130" height="36" rx="18" fill="#f6f5f2" stroke="#e8e6e1" stroke-width="2"/><text x="395" y="276" font-size="17.5" fill="#1A1918" text-anchor="middle" font-weight="700">conectar</text>
+        <rect x="160" y="342" width="150" height="36" rx="18" fill="#f6f5f2" stroke="#e8e6e1" stroke-width="2"/><text x="235" y="366" font-size="17.5" fill="#1A1918" text-anchor="middle" font-weight="700">ensinar</text>
+        <rect x="10" y="252" width="130" height="36" rx="18" fill="#f6f5f2" stroke="#e8e6e1" stroke-width="2"/><text x="75" y="276" font-size="17.5" fill="#1A1918" text-anchor="middle" font-weight="700">ele trabalha</text>
+        <rect x="12" y="118" width="126" height="36" rx="18" fill="#f6f5f2" stroke="#e8e6e1" stroke-width="2"/><text x="75" y="142" font-size="17.5" fill="#1A1918" text-anchor="middle" font-weight="700">melhorar</text>
+        <text x="235" y="192" font-size="21" fill="#c2600a" text-anchor="middle" font-weight="800">cada volta,</text>
+        <text x="235" y="220" font-size="21" fill="#c2600a" text-anchor="middle" font-weight="800">mais esperto</text>
+      </svg>
