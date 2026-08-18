@@ -39,6 +39,17 @@ body{
 }
 .wrap{max-width:780px; margin:0 auto; display:flex; flex-direction:column; gap:30px}
 
+/* Faixa de abas — liga esta pagina a outra publica da imersao */
+.abas{display:flex; gap:5px; flex-wrap:wrap; border-bottom:1px solid var(--linha)}
+.aba{
+  font-size:15.5px; font-weight:600; text-decoration:none; color:var(--tinta-3);
+  padding:11px 18px; border-radius:11px 11px 0 0;
+  border:1px solid transparent; border-bottom:none; position:relative; top:1px;
+  transition:color .15s ease, background .15s ease;
+}
+.aba:hover{color:var(--tinta)}
+.aba.ativa{background:var(--card); border-color:var(--linha); color:var(--tinta)}
+
 header{display:flex; flex-direction:column; gap:12px}
 .eyebrow{font-size:12.5px; font-weight:650; letter-spacing:.12em; text-transform:uppercase; color:var(--acento)}
 h1{font-size:clamp(31px,6.5vw,44px); line-height:1.08; margin:0; font-weight:700; letter-spacing:-.022em; text-wrap:balance}
@@ -136,6 +147,11 @@ footer{
 </head>
 <body>
 <div class="wrap">
+
+  <nav class="abas">
+    <a class="aba ativa" aria-current="page" href="#">Guia do Aluno</a>
+    <a class="aba" href="https://michelchung-stack.github.io/fioforte/">Os números da Fio Forte</a>
+  </nav>
 
   <header>
     <span class="eyebrow">Imersão Claude · IA aplicada a negócios</span>
