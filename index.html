@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia do Aluno · Imersão Claude — IA aplicada a negócios</title>
+<style>
+:root{
+  --ground:#f6f5f2; --card:#ffffff; --linha:#e8e6e1; --linha-forte:#d9d5cd;
+  --tinta:#1a1918; --tinta-2:#5c5b56; --tinta-3:#8a8580;
+  --acento:#e8790c; --acento-escuro:#c2600a; --acento-fundo:#fdf1e4; --acento-borda:#f2c99b;
+  --ok:#2f7d5a;
+  --raio:14px; --sombra:0 1px 2px rgba(26,25,24,.05), 0 6px 18px rgba(26,25,24,.05);
+  --sans:"Segoe UI Variable Display","Segoe UI",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --mono:ui-monospace,"Cascadia Mono","Consolas","SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#141312; --card:#1d1b1a; --linha:#2e2b28; --linha-forte:#3d3936;
+    --tinta:#f2efe9; --tinta-2:#b3ada4; --tinta-3:#8a837a;
+    --acento:#ff9a3d; --acento-escuro:#ffb066; --acento-fundo:#2b1c0c; --acento-borda:#5a3a15;
+    --ok:#63b98f;
+    --sombra:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#141312; --card:#1d1b1a; --linha:#2e2b28; --linha-forte:#3d3936;
+  --tinta:#f2efe9; --tinta-2:#b3ada4; --tinta-3:#8a837a;
+  --acento:#ff9a3d; --acento-escuro:#ffb066; --acento-fundo:#2b1c0c; --acento-borda:#5a3a15;
+  --ok:#63b98f;
+  --sombra:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{
+  background:var(--ground); color:var(--tinta); font-family:var(--sans);
+  font-size:17px; line-height:1.6; margin:0;
+  padding:clamp(20px,5vw,56px) clamp(16px,4vw,32px) 80px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:780px; margin:0 auto; display:flex; flex-direction:column; gap:30px}
+
+header{display:flex; flex-direction:column; gap:12px}
+.eyebrow{font-size:12.5px; font-weight:650; letter-spacing:.12em; text-transform:uppercase; color:var(--acento)}
+h1{font-size:clamp(31px,6.5vw,44px); line-height:1.08; margin:0; font-weight:700; letter-spacing:-.022em; text-wrap:balance}
+.sub{margin:0; color:var(--tinta-2); font-size:18.5px; max-width:60ch}
+
+/* ── o desafio: o único bloco com data ── */
+.desafio{
+  background:var(--acento-fundo); border:2px solid var(--acento-borda);
+  border-radius:var(--raio); padding:24px clamp(18px,3.5vw,28px);
+  display:flex; flex-direction:column; gap:14px;
+}
+.desafio .selo{font-size:12.5px; font-weight:700; letter-spacing:.11em; text-transform:uppercase; color:var(--acento-escuro)}
+.desafio h2{margin:0; font-size:26px; font-weight:700; letter-spacing:-.015em}
+.desafio .quando{font-size:25px; font-weight:800; color:var(--acento-escuro); line-height:1.2; letter-spacing:-.015em}
+.desafio .dur{font-size:16px; font-weight:600; color:var(--tinta-2)}
+.desafio p{margin:0; font-size:17px}
+.desafio dl{margin:4px 0 0; display:flex; flex-direction:column; gap:11px}
+.desafio dt{font-size:12.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--tinta-3); margin-bottom:2px}
+.desafio dd{margin:0; font-size:17px}
+.meet{
+  display:inline-flex; align-items:center; gap:9px; align-self:flex-start;
+  background:var(--acento); color:#fff; text-decoration:none; font-weight:650; font-size:17px;
+  padding:13px 24px; border-radius:10px; word-break:break-all;
+}
+.meet:hover{background:var(--acento-escuro); color:#fff}
+
+/* ── degraus ── */
+.escada-rot{font-size:12.5px; font-weight:650; letter-spacing:.12em; text-transform:uppercase; color:var(--tinta-3); margin-top:6px}
+.degrau{
+  background:var(--card); border:1px solid var(--linha); border-radius:var(--raio);
+  box-shadow:var(--sombra); padding:24px clamp(18px,3.5vw,28px);
+  display:flex; flex-direction:column; gap:15px;
+}
+.degrau-cab{display:flex; align-items:center; gap:15px}
+.num{
+  flex-shrink:0; width:42px; height:42px; border-radius:11px;
+  background:var(--acento); color:#fff; font-weight:800; font-size:21px;
+  display:flex; align-items:center; justify-content:center;
+}
+.degrau h2{margin:0; font-size:25px; font-weight:700; letter-spacing:-.017em}
+.tecnico{font-size:14.5px; color:var(--tinta-3)}
+.resumo p{margin:0 0 9px; font-size:17px; color:var(--tinta-2)}
+.resumo p:last-child{margin-bottom:0}
+.resumo strong, .passos strong{color:var(--tinta); font-weight:650}
+.passos-rot, .prompts-rot{
+  font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--tinta-3); padding-top:6px; border-top:1px solid var(--linha);
+}
+ol.passos{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:8px}
+ol.passos li{font-size:16.5px}
+
+.prompts{display:flex; flex-direction:column; gap:13px}
+.prompt{border:1px solid var(--linha-forte); border-radius:11px; padding:16px 18px; display:flex; flex-direction:column; gap:11px}
+.prompt h4{margin:0; font-size:17px; font-weight:650}
+.prompt-nota{margin:3px 0 0; font-size:14.5px; color:var(--tinta-3)}
+.prompt pre{
+  font-family:var(--mono); font-size:13.5px; line-height:1.6; margin:0;
+  background:var(--ground); border:1px solid var(--linha); border-radius:9px;
+  padding:14px; overflow-x:auto; white-space:pre-wrap; word-break:break-word;
+}
+.btn{
+  font-family:inherit; font-size:15.5px; font-weight:600; cursor:pointer;
+  border-radius:9px; padding:11px 22px; border:1px solid transparent;
+  background:var(--acento); color:#fff; align-self:flex-start;
+  transition:transform .12s ease, background .15s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn:hover{background:var(--acento-escuro)}
+.btn[data-feito="1"]{background:var(--ok)}
+.btn:focus-visible{outline:2px solid var(--acento); outline-offset:2px}
+
+.caixa{
+  background:var(--card); border:1px solid var(--linha); border-radius:var(--raio);
+  box-shadow:var(--sombra); padding:22px clamp(18px,3.5vw,28px);
+  display:flex; flex-direction:column; gap:10px;
+}
+.caixa h3{margin:0; font-size:21px; font-weight:700}
+.caixa p{margin:0; font-size:17px; color:var(--tinta-2)}
+.caixa a{color:var(--acento-escuro); font-weight:600}
+
+footer{
+  display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+  flex-wrap:wrap; padding-top:22px; border-top:1px solid var(--linha);
+  font-size:14.5px; color:var(--tinta-3);
+}
+.marca{font-weight:800; letter-spacing:.02em; color:var(--tinta-2)}
+.marca span{color:var(--acento)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">Imersão Claude · IA aplicada a negócios</span>
+    <h1>Guia do Aluno</h1>
+    <p class="sub">Tudo que a gente construiu no sábado, com o passo a passo pra você refazer
+    sozinho e os prompts prontos pra copiar. Não é o material da apresentação — é o manual
+    de como fazer.</p>
+  </header>
+
+  <div class="desafio">
+    <span class="selo">🏆 O desafio — é agora</span>
+    <h2>Crie a sua primeira habilidade</h2>
+    <div class="quando">Quarta, 19 de agosto, às 19h</div>
+    <div class="dur">1h30 de duração</div>
+    <a class="meet" href="https://meet.google.com/tva-qyim-pmm">Entrar no Google Meet</a>
+    <dl>
+      <div><dt>O que levar</dt><dd>Uma habilidade sua, para uma dor real do seu negócio. Não precisa estar pronta nem bonita.</dd></div>
+      <div><dt>Quem participa</dt><dd>Aberto a todo mundo que esteve na imersão — tenha criado a habilidade ou não.</dd></div>
+      <div><dt>O prêmio</dt><dd>A sala vota a melhor. Quem ganhar recebe um <strong>diagnóstico de automação</strong> com o Michel e o Thiago: a gente entra na sua operação, mapeia o que dá pra automatizar e sai de lá com o plano do seu próximo projeto.</dd></div>
+    </dl>
+    <p><strong>Ainda não criou?</strong> Dá tempo. Vá para o degrau 5 aqui embaixo — os prompts
+    estão prontos. E se não souber qual habilidade fazer, comece pelos três lugares onde a IA
+    devolve dinheiro: <strong>clareza</strong> (onde você decide no escuro por não enxergar os
+    seus números), <strong>tempo</strong> (o processo repetido que come as suas horas) e
+    <strong>custo</strong> (a ferramenta cara que dá pra fazer por dentro).</p>
+  </div>
+
+  <div class="escada-rot">A escada do dia — os sete degraus</div>
+
+      <section class="degrau" id="degrau-1">
+        <div class="degrau-cab">
+          <span class="num">1</span>
+          <div>
+            <h2>O que é IA</h2>
+            <span class="tecnico">nome técnico: IA generativa (LLM)</span>
+          </div>
+        </div>
+        <div class="resumo"><p>Ela não busca resposta pronta: ela <strong>gera</strong>. Aprendeu com quase tudo que a humanidade escreveu — e por isso responde conversando, em vez de devolver uma lista de links.</p><p>O que entra é quase tudo: planilha, PDF, contrato, print, áudio. Você não precisa converter nem formatar nada — joga do jeito que está.</p></div>
+        <div class="passos-rot">Como refazer</div>
+        <ol class="passos"><li>Confira que você está no <strong>Claude Pro</strong> — é o mínimo pro método do dia (o plano grátis não tem Cowork nem Habilidades).</li><li>Use o <strong>Cowork</strong> no computador. É onde ele trabalha com as suas pastas e arquivos, e é onde a gente passou o dia.</li><li>Guarde a diferença: <strong>consultor</strong> é quando ele só responde; <strong>agente</strong> é quando ele faz. O dia inteiro foi sobre virar a chave do primeiro pro segundo.</li></ol>
+        
+      </section>
+      <section class="degrau" id="degrau-2">
+        <div class="degrau-cab">
+          <span class="num">2</span>
+          <div>
+            <h2>Falar com a IA</h2>
+            <span class="tecnico">nome técnico: Prompt</span>
+          </div>
+        </div>
+        <div class="resumo"><p>Prompt é só o nome técnico do seu pedido — tudo que você escreve e anexa. A qualidade do que entra decide a qualidade do que sai.</p><p>A receita tem três ingredientes: <strong>o contexto</strong> (quem você é, pra quem é o resultado), <strong>o porquê</strong> (o objetivo, que faz ele decidir melhor) e <strong>o formato</strong> (como você quer receber).</p></div>
+        <div class="passos-rot">Como refazer</div>
+        <ol class="passos"><li>Antes de pedir, decida <strong>a altura</strong>: você quer ideias, uma proposta fechada ou a execução? Pedir ideia e receber execução é o desencontro mais comum.</li><li>Com preguiça de escrever contexto? <strong>Fale.</strong> No Mac é Caps Lock; no Windows é a tecla Windows + H. Contexto falado sai mais completo do que digitado.</li><li>Se a resposta veio rasa, quase sempre é falta de contexto — não é limite da ferramenta.</li></ol>
+        <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>A receita do bolo — o esqueleto de um bom pedido</h4>
+            <p class="prompt-nota">Troque o que está entre colchetes e cole.</p>
+          </div>
+          <pre id="pre-receita">Contexto: eu sou [quem você é] e vendo [o que você vende] para [quem compra]. Hoje o meu maior problema é [a dor].
+
+O que eu quero: [o pedido] — porque [o motivo, o que você vai fazer com isso].
+
+Formato da resposta: [tabela / tópicos / um parágrafo e três ações / o que você preferir]. Português simples, sem jargão, e me diga o que fazer com a informação.</pre>
+          <button class="btn" data-copiar="receita">Copiar</button>
+        </div></div>
+      </section>
+      <section class="degrau" id="degrau-3">
+        <div class="degrau-cab">
+          <span class="num">3</span>
+          <div>
+            <h2>Dar memória</h2>
+            <span class="tecnico">nome técnico: Segundo cérebro</span>
+          </div>
+        </div>
+        <div class="resumo"><p>De manhã ele era a Dory: toda conversa começava do zero. Depois deste degrau, <strong>toda conversa nova nasce sabendo quem você é</strong>.</p><p>A ordem é o que muda o resultado: <strong>1. coletar · 2. guardar · 3. pedir</strong>. O pedido é a parte mais fácil e a última. Quem vai direto pro pedido recebe resposta rasa — e acha que a culpa é da IA.</p></div>
+        <div class="passos-rot">Como refazer</div>
+        <ol class="passos"><li><strong>Coletar</strong> — pelas quatro portas: você escreve, você fala, manda ele pesquisar, ou deixa ele te entrevistar. É aqui que mora o trabalho.</li><li><strong>Guardar</strong> — crie a pasta <strong>“Minha Empresa — IA”</strong> no Google Drive do computador e aponte o Cowork pra ela. É a casa dos seus projetos.</li><li><strong>Pedir</strong> — dois minutos. Feitos o 1 e o 2, o mesmo pedido volta rico, e ainda sugere o que você não tinha pensado.</li><li>Cole o seu perfil em <strong>Configurações → Perfil → Instruções para o Claude</strong> e teste numa conversa nova: <em>“o que você sabe sobre mim?”</em></li></ol>
+        <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>Coletar — deixe ele te entrevistar</h4>
+            <p class="prompt-nota">A porta mais fácil de todas: em vez de escrever, você responde.</p>
+          </div>
+          <pre id="pre-entrevista">Eu quero te contar tudo sobre a minha empresa pra você conseguir me ajudar de verdade daqui pra frente.
+
+Em vez de eu escrever um textão, me entrevista: o que você precisa saber pra me ajudar? Me pergunta, uma coisa de cada vez, e vai até você ter o suficiente.</pre>
+          <button class="btn" data-copiar="entrevista">Copiar</button>
+        </div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>Coletar — mande ele pesquisar você</h4>
+            <p class="prompt-nota">Funciona bem se a sua empresa tem site, loja ou redes.</p>
+          </div>
+          <pre id="pre-pesquisa">Pesquisa o que existe publicado sobre a minha empresa e me mostra o que você encontrou.</pre>
+          <button class="btn" data-copiar="pesquisa">Copiar</button>
+        </div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>Guardar — transformar tudo nas instruções de perfil</h4>
+            <p class="prompt-nota">Peça isso depois da entrevista. Depois cole em Configurações → Perfil.</p>
+          </div>
+          <pre id="pre-perfil">Transforma tudo isso nas minhas instruções de perfil, enxuto, até 500 palavras.
+
+Inclui: quem eu sou, o que eu vendo, pra quem, os meus números, a minha meta e a minha maior dor. E no fim, como eu quero que você fale comigo: direto, com números, português simples sem jargão, e sempre me dizendo o que fazer com a informação.</pre>
+          <button class="btn" data-copiar="perfil">Copiar</button>
+        </div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>Guardar — deixe ele montar a sua central</h4>
+            <p class="prompt-nota">Com a pasta “Minha Empresa — IA” já selecionada no Cowork.</p>
+          </div>
+          <pre id="pre-pastas">Criei essa pasta pra organizar e trabalhar tudo da empresa por aqui.
+
+Monte as pastas ao lado e, em cada uma, um arquivo .md com o projeto e as tarefas dali. Crie também um MEMORIA.md: quando eu pedir pra “salvar o contexto”, registre lá.
+
+Me pergunte o que precisar pra preencher.</pre>
+          <button class="btn" data-copiar="pastas">Copiar</button>
+        </div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>A regra da sessão — antes de fechar o computador</h4>
+            <p class="prompt-nota">Conversa é rascunho, arquivo é pra sempre. Uma missão, uma sessão.</p>
+          </div>
+          <pre id="pre-retomada">Salva o contexto: registra no MEMORIA.md o que a gente decidiu e o que ficou pendente.
+
+Depois me escreve o prompt de retomada, pra eu colar numa conversa nova e continuar de onde parei.</pre>
+          <button class="btn" data-copiar="retomada">Copiar</button>
+        </div></div>
+      </section>
+      <section class="degrau" id="degrau-4">
+        <div class="degrau-cab">
+          <span class="num">4</span>
+          <div>
+            <h2>Conectores</h2>
+            <span class="tecnico">nome técnico: A tomada</span>
+          </div>
+        </div>
+        <div class="resumo"><p>Conector é a tomada: dá a ele acesso às ferramentas que você já usa. Memória é o que ele <em>sabe</em>; conector é onde ele <em>chega</em>.</p><p>Tem mais de quatrocentos na lista. E o que não está na lista também entra — muda só o caminho.</p></div>
+        <div class="passos-rot">Como refazer</div>
+        <ol class="passos"><li><strong>Gmail e Agenda</strong> — Configurações → Personalizar → Conectores. Ache na lista, clique em Vincular e entre com a sua conta Google.</li><li><strong>Claude in Chrome</strong> — na loja do Chrome busque por Claude e confira que o fornecedor é a <strong>Anthropic</strong>. Adicione, fixe o ícone na barra e entre com a sua conta.</li><li>Teste: abra o painel da sua plataforma no Chrome e pergunte <strong>no Cowork</strong> (não na janelinha da extensão) — a extensão é o olho, quem conversa com você é o Cowork.</li></ol>
+        <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>Testar a extensão do Chrome</h4>
+            <p class="prompt-nota">Com o painel da sua plataforma aberto numa aba. Pergunte no Cowork.</p>
+          </div>
+          <pre id="pre-chrome">O que você está vendo aí no meu Chrome? Olha o meu painel e me diz o que entendeu.</pre>
+          <button class="btn" data-copiar="chrome">Copiar</button>
+        </div></div>
+      </section>
+      <section class="degrau" id="degrau-5">
+        <div class="degrau-cab">
+          <span class="num">5</span>
+          <div>
+            <h2>Ensinar a IA</h2>
+            <span class="tecnico">nome técnico: Habilidades (skills)</span>
+          </div>
+        </div>
+        <div class="resumo"><p>Habilidade é o funcionário que você treina <strong>uma vez</strong>. Prompt é explicar a tarefa toda santa vez; habilidade é ensinar uma vez e ela executa pra sempre.</p><p>Na prática é um arquivo de texto — um manual que ele segue. Dentro dele: nome · quando usar · instruções · formato da saída. Regra de bolso: <strong>pediu a mesma coisa duas vezes? Vira habilidade.</strong></p></div>
+        <div class="passos-rot">Como refazer</div>
+        <ol class="passos"><li>Decida <strong>antes de abrir o teclado</strong>: o que ela <strong>recebe</strong>, o que ela <strong>pergunta</strong> quando falta dado, e o que ela <strong>devolve</strong>.</li><li>Crie e dê o nome. A partir daí ele pergunta — prepare as <strong>respostas</strong>, não as perguntas.</li><li>Escreva as instruções: o que ela lê, como cruza, e a <strong>regra de ouro</strong> — nunca inventar número.</li><li>Dê o formato da saída e <strong>um exemplo bom e um ruim</strong>. É o exemplo que separa habilidade boa de habilidade genérica.</li><li>Salve em <strong>Configurações → Capacidades → Habilidades</strong>. Ela fica na sua conta, não na pasta.</li><li>Criou não é congelou: você <strong>edita e melhora</strong> a habilidade na medida que trabalha.</li></ol>
+        <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>Criar a habilidade — a especificação</h4>
+            <p class="prompt-nota">Troque o que está entre colchetes. É o passo 1 do que a gente fez no sábado.</p>
+          </div>
+          <pre id="pre-criar-habilidade">Quero criar uma habilidade chamada [nome da habilidade].
+
+O que ela recebe: [os arquivos ou informações que você vai dar pra ela].
+O que ela faz: [organizar / cruzar / calcular / interpretar — o que você quer que ela pense].
+O que ela devolve: [resumo / tabela / diagnóstico / plano de ação].
+
+Uma regra que vale sempre: nunca invente número. Se o dado não estiver no que eu te dei, pare e me pergunte, em vez de estimar.
+
+Fale comigo em português de dono, sem jargão. Pode começar me perguntando o que você precisa saber.</pre>
+          <button class="btn" data-copiar="criar-habilidade">Copiar</button>
+        </div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>O formato da saída — se você travar</h4>
+            <p class="prompt-nota">Sugestão de partida. O formato é seu, peça do jeito que você gosta de receber.</p>
+          </div>
+          <pre id="pre-formato">Quero o resultado em três blocos:
+
+1. O que está bom.
+2. O que preocupa — cada ponto com o dado que sustenta.
+3. O que fazer — no máximo três ações, cada uma marcada como resolver hoje, essa semana, ou pode esperar.</pre>
+          <button class="btn" data-copiar="formato">Copiar</button>
+        </div></div>
+      </section>
+      <section class="degrau" id="degrau-6">
+        <div class="degrau-cab">
+          <span class="num">6</span>
+          <div>
+            <h2>IA trabalhando</h2>
+            <span class="tecnico">nome técnico: Agente</span>
+          </div>
+        </div>
+        <div class="resumo"><p>De manhã você contratou e treinou. Agora é a <strong>primeira semana</strong> dele na sua empresa — e todo funcionário novo tem uma: você conta mais, ele erra, você corrige.</p><p>Quatro caminhos pra continuar: contar mais · dar mais acesso · ensinar mais habilidades · e o mais importante, <strong>perguntar pra ele</strong> o que fazer em seguida.</p></div>
+        <div class="passos-rot">Como refazer</div>
+        <ol class="passos"><li><strong>Contar mais</strong> — produtos, regras, o que sempre dá errado. O perfil da manhã era só a entrevista de admissão.</li><li><strong>Dar mais acesso</strong> — abra no Chrome o seu marketplace, o seu site, o seu painel de anúncios, e peça pra ele olhar e entender.</li><li><strong>Ensinar mais habilidades</strong> — cada tarefa repetida da sua semana é uma candidata.</li><li><strong>Perguntar</strong> — quando não souber como fazer alguma coisa, pergunte pra ele. É o atalho que a maioria esquece.</li></ol>
+        <div class="prompts"><div class="prompts-rot">Prompts prontos — clique em Copiar e cole na conversa</div>
+        <div class="prompt">
+          <div class="prompt-cab">
+            <h4>A pergunta que abre portas</h4>
+            <p class="prompt-nota">Faça depois que ele já tem o seu contexto. As respostas costumam surpreender.</p>
+          </div>
+          <pre id="pre-o-que-mais">Com tudo o que eu já te contei sobre a minha empresa, o que mais dá pra fazer aqui que eu ainda não te pedi?
+
+Me dá uma lista, da que mais economiza o meu tempo ou o meu dinheiro pra que menos economiza — e me diz por onde começar.</pre>
+          <button class="btn" data-copiar="o-que-mais">Copiar</button>
+        </div></div>
+      </section>
+      <section class="degrau" id="degrau-7">
+        <div class="degrau-cab">
+          <span class="num">7</span>
+          <div>
+            <h2>O looping</h2>
+            <span class="tecnico">nome técnico: Melhoria contínua</span>
+          </div>
+        </div>
+        <div class="resumo"><p>É sempre o mesmo movimento: você fala, dá memória organizada, conecta mais lugares, ensina mais habilidades. <strong>Cada volta ele te conhece melhor</strong> — e a resposta vem mais bacana.</p><p>O sábado foi uma volta inteira. Você sai com o norte; o resto é praticar todo dia — não tem outro jeito de ficar bom nisso.</p></div>
+        <div class="passos-rot">Como refazer</div>
+        <ol class="passos"><li><strong>Dado sensível</strong> — senha e cartão, nunca. Dado de cliente, só o necessário.</li><li><strong>Instalação</strong> — plugin e extensão só de quem você conhece.</li><li><strong>Não limite o que ele pode fazer</strong> — os modelos melhoram rápido; o que ele não faz hoje, faz amanhã. Pergunte a ele o que há de novo pro seu caso.</li></ol>
+        
+      </section>
+
+  <div class="caixa">
+    <h3>Quer treinar com os números do sábado?</h3>
+    <p>Os dados da Malharia Fio Forte continuam no ar. Aponte a sua habilidade pra eles e
+    compare com o que você achou na imersão — é a melhor forma de testar se ela ficou boa.</p>
+    <p><a href="https://michelchung-stack.github.io/fioforte/">https://michelchung-stack.github.io/fioforte/</a></p>
+  </div>
+
+  <div class="caixa">
+    <h3>Travou em alguma coisa?</h3>
+    <p>Manda no grupo do WhatsApp. A pergunta que parece boba costuma ser a dúvida de mais
+    cinco pessoas — foi assim o dia inteiro no sábado.</p>
+  </div>
+
+  <footer>
+    <span>Imersão Claude · 15 de agosto de 2026 · São Paulo</span>
+    <span class="marca">R<span>2</span> GROWTH</span>
+  </footer>
+</div>
+
+<script>
+const D = {"receita":"Contexto: eu sou [quem você é] e vendo [o que você vende] para [quem compra]. Hoje o meu maior problema é [a dor].\n\nO que eu quero: [o pedido] — porque [o motivo, o que você vai fazer com isso].\n\nFormato da resposta: [tabela / tópicos / um parágrafo e três ações / o que você preferir]. Português simples, sem jargão, e me diga o que fazer com a informação.","entrevista":"Eu quero te contar tudo sobre a minha empresa pra você conseguir me ajudar de verdade daqui pra frente.\n\nEm vez de eu escrever um textão, me entrevista: o que você precisa saber pra me ajudar? Me pergunta, uma coisa de cada vez, e vai até você ter o suficiente.","pesquisa":"Pesquisa o que existe publicado sobre a minha empresa e me mostra o que você encontrou.","perfil":"Transforma tudo isso nas minhas instruções de perfil, enxuto, até 500 palavras.\n\nInclui: quem eu sou, o que eu vendo, pra quem, os meus números, a minha meta e a minha maior dor. E no fim, como eu quero que você fale comigo: direto, com números, português simples sem jargão, e sempre me dizendo o que fazer com a informação.","pastas":"Criei essa pasta pra organizar e trabalhar tudo da empresa por aqui.\n\nMonte as pastas ao lado e, em cada uma, um arquivo .md com o projeto e as tarefas dali. Crie também um MEMORIA.md: quando eu pedir pra “salvar o contexto”, registre lá.\n\nMe pergunte o que precisar pra preencher.","retomada":"Salva o contexto: registra no MEMORIA.md o que a gente decidiu e o que ficou pendente.\n\nDepois me escreve o prompt de retomada, pra eu colar numa conversa nova e continuar de onde parei.","chrome":"O que você está vendo aí no meu Chrome? Olha o meu painel e me diz o que entendeu.","criar-habilidade":"Quero criar uma habilidade chamada [nome da habilidade].\n\nO que ela recebe: [os arquivos ou informações que você vai dar pra ela].\nO que ela faz: [organizar / cruzar / calcular / interpretar — o que você quer que ela pense].\nO que ela devolve: [resumo / tabela / diagnóstico / plano de ação].\n\nUma regra que vale sempre: nunca invente número. Se o dado não estiver no que eu te dei, pare e me pergunte, em vez de estimar.\n\nFale comigo em português de dono, sem jargão. Pode começar me perguntando o que você precisa saber.","formato":"Quero o resultado em três blocos:\n\n1. O que está bom.\n2. O que preocupa — cada ponto com o dado que sustenta.\n3. O que fazer — no máximo três ações, cada uma marcada como resolver hoje, essa semana, ou pode esperar.","o-que-mais":"Com tudo o que eu já te contei sobre a minha empresa, o que mais dá pra fazer aqui que eu ainda não te pedi?\n\nMe dá uma lista, da que mais economiza o meu tempo ou o meu dinheiro pra que menos economiza — e me diz por onde começar."};
+
+async function copiar(txt){
+  try{
+    await navigator.clipboard.writeText(txt);
+    return true;
+  }catch(e){
+    const ta = document.createElement("textarea");
+    ta.value = txt;
+    ta.setAttribute("readonly","");
+    ta.style.position = "fixed";
+    ta.style.top = "-1000px";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try{ ok = document.execCommand("copy"); }catch(e2){ ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+}
+
+document.addEventListener("click", async (ev) => {
+  const b = ev.target.closest("[data-copiar]");
+  if(!b) return;
+  const rotulo = b.textContent;
+  const ok = await copiar(D[b.dataset.copiar]);
+  b.textContent = ok ? "Copiado — agora cole na conversa" : "Não deu — selecione o texto acima";
+  b.dataset.feito = ok ? "1" : "";
+  setTimeout(() => { b.textContent = rotulo; b.dataset.feito = ""; }, 2600);
+});
+</script>
+
+</body>
+</html>
