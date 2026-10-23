@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:code.claude.com)",
+      "WebFetch(domain:docs.claude.com)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:claude.com)",
+      "WebFetch(domain:claude.ai)",
+      "WebFetch(domain:registry.npmjs.org)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:star-history.com)",
+      "Bash(python3 *)",
+      "Bash(python *)",
+      "Bash(node *)",
+      "Bash(npx playwright *)",
+      "Bash(ffmpeg *)",
+      "Bash(ffprobe *)"
+    ]
+  }
+}
