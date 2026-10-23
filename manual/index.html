@@ -341,8 +341,8 @@ code{overflow-wrap:anywhere}
         <div class="cx" data-p="git" data-l="Conferir o Git" data-t="Comando"></div>
         <p><b>A pasta, a planilha e a pergunta</b></p>
         <ol class="passos" start="3">
-          <li>Em <b>Documentos</b> (não no Google Drive!), crie uma pasta chamada <code>meu-sistema</code>.</li>
-          <li>Exporte <b>uma planilha real</b> que você já usa (vendas, estoque ou financeiro) e copie pra dentro da pasta <code>meu-sistema</code>.</li>
+          <li>Em <b>Documentos</b> (não no Google Drive!), crie uma pasta chamada <code>meu-primeiro-sistema</code>.</li>
+          <li>Exporte <b>uma planilha real</b> que você já usa (vendas, estoque ou financeiro) e copie pra dentro da pasta <code>meu-primeiro-sistema</code>.</li>
           <li>Escreva <b>uma pergunta</b> que você queria ver respondida toda semana. Exemplo: "quanto vendi este mês, por canal?". À tarde o seu sistema começa por ela.</li>
         </ol>
         <p class="nota">Não precisa criar conta em nada: GitHub, Supabase e Vercel a gente explica no sábado.</p>
@@ -432,9 +432,9 @@ code{overflow-wrap:anywhere}
     <div class="card-b">
       <p>Você sai sabendo onde a obra mora e com a cola de comandos na mão.</p>
       <p class="nota">Ainda falta instalar algo? <a class="vai" href="#terminal">Passo a passo da preparação</a>.</p>
-      <p class="alerta"><b>A pasta do sistema fica em Documentos</b>, fora do Google Drive: a sincronização do Drive estraga o Git. Crie em Documentos uma pasta chamada <code>meu-sistema</code>.</p>
+      <p class="alerta"><b>A pasta do sistema fica em Documentos</b>, fora do Google Drive: a sincronização do Drive estraga o Git. Crie em Documentos uma pasta chamada <code>meu-primeiro-sistema</code>.</p>
       <p><b>Abrir o terminal na pasta certa</b></p>
-      <ol class="passos"><li><b>Windows:</b> ache a pasta <code>meu-sistema</code> em Documentos, botão direito do mouse em cima dela e clique em <b>Open in Terminal</b> (o Windows 11 mostra esse nome em inglês mesmo em português).</li><li><b>Mac:</b> arraste a pasta pro ícone do Terminal no Dock. Ou botão direito na pasta → Serviços → <b>Novo Terminal na Pasta</b> (vem desligado em alguns Macs: Ajustes do Sistema → Teclado → Atalhos de Teclado → Serviços → Arquivos e Pastas).</li><li><b>Confira:</b> a janela abre com o nome da pasta. Digite <code>claude</code> e Enter. Perguntou se confia na pasta? Sim.</li></ol>
+      <ol class="passos"><li><b>Windows:</b> ache a pasta <code>meu-primeiro-sistema</code> em Documentos, botão direito do mouse em cima dela e clique em <b>Open in Terminal</b> (o Windows 11 mostra esse nome em inglês mesmo em português).</li><li><b>Mac:</b> arraste a pasta pro ícone do Terminal no Dock. Ou botão direito na pasta → Serviços → <b>Novo Terminal na Pasta</b> (vem desligado em alguns Macs: Ajustes do Sistema → Teclado → Atalhos de Teclado → Serviços → Arquivos e Pastas).</li><li><b>Confira:</b> a janela abre com o nome da pasta. Digite <code>claude</code> e Enter. Perguntou se confia na pasta? Sim.</li></ol>
       <p><b>Faz junto: diga oi</b>. Com o Claude Code aberto, escreva com as suas palavras, sem copiar: <i>"Oi! Que pasta é essa? O que você consegue fazer aqui?"</i> e depois <i>"O que você acha importante eu saber pra começar?"</i>. Fale normal, como ontem no app.</p>
     </div>
   </article>
@@ -485,7 +485,7 @@ code{overflow-wrap:anywhere}
       <p>Três plantas, do geral ao detalhe: a <b>global</b> (vale em toda pasta, pra sempre), a do <b>Meu Claude</b> (a da sexta, no Drive) e a da <b>obra</b> (esta pasta). Cada regra mora num lugar só. Curto: cada uma cabe numa tela.</p>
       <p><b>Faz junto: a planta global, primeiro</b>. Cole o 17 no terminal (vale em qualquer pasta). Responda as perguntas, leia e corte: tirou a linha e ele não erra? Corta. Gostou? Diga "pode salvar".</p>
       <div class="cx" data-p="s17" data-n="17" data-l="A planta global (~/.claude/CLAUDE.md)"></div>
-      <p><b>Faz junto: a planta da obra</b>. Na mesma janela do oi (<code>meu-sistema</code>), cole o 18. Ele cria o CLAUDE.md da pasta, que puxa o do Meu Claude com <code>@</code>, e o CONTEXTO.md, versão 1. Depois dê nome à sessão: <code>/rename minha-obra</code>.</p>
+      <p><b>Faz junto: a planta da obra</b>. Na mesma janela do oi (<code>meu-primeiro-sistema</code>), cole o 18. Ele cria o CLAUDE.md da pasta, que puxa o do Meu Claude com <code>@</code>, e o CONTEXTO.md, versão 1. Depois dê nome à sessão: <code>/rename minha-obra</code>.</p>
       <div class="cx" data-p="s18" data-n="18" data-l="A planta da obra (CLAUDE.md da pasta)"></div>
       <p class="nota">Regra que vem nas duas: código e sistema numa pasta local em Documentos, clone do repositório (repo) no GitHub; textos .md (planta, contexto) podem ficar no Drive.</p>
     </div>
@@ -497,7 +497,7 @@ code{overflow-wrap:anywhere}
       <p><b>O que é uma repo.</b> Repositório (repo) é um manual de instruções aberto, na prateleira do GitHub. Estrela é curtida. Cada manual instalado ocupa a mesa dele (o contexto): instale só o que usa. Mesma regra pro CLAUDE.md: curto.</p>
       <p><b>Repo de estranho é código de estranho.</b> Instalar é deixar entrar na sua casa. Os mais estrelados são pra conhecer; na sala só se instala da loja oficial.</p>
       <p><b>A ficha do superpowers.</b> É um método de trabalho pronto: entende o pedido, faz o plano, executa e revisa. Por isso é o primeiro plugin.</p>
-      <p><b>Faz junto: instale o primeiro plugin</b>, no terminal da pasta <code>meu-sistema</code>. Copie e cole, não precisa digitar. Depois recarregue com o segundo comando.</p>
+      <p><b>Faz junto: instale o primeiro plugin</b>, no terminal da pasta <code>meu-primeiro-sistema</code>. Copie e cole, não precisa digitar. Depois recarregue com o segundo comando.</p>
       <div class="cx" data-p="plugin" data-l="Instalar o superpowers" data-t="Comando"></div>
       <div class="cx" data-p="reload" data-l="Recarregar os plugins" data-t="Comando"></div>
     </div>
