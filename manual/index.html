@@ -132,7 +132,7 @@ code{overflow-wrap:anywhere}
 <main class="pad"><div class="in">
 
 <section id="sexta" role="tabpanel" aria-labelledby="t-sexta" style="display:flex;flex-direction:column;gap:22px">
-  <nav class="indice" aria-label="Práticas da sexta"><a href="#pratica1">Prática 1</a><a href="#receita">Receita completa</a><a href="#perfil">Perfil</a><a href="#md">O que é .md</a><a href="#pratica2">Prática 2</a><a href="#conectores">Conectores (MCP)</a><a href="#navegador">Navegador</a><a href="#pratica3">Prática 3</a><a href="#pratica4">Prática 4</a><a href="#livre">Prática livre</a><a href="#terminal">Terminal</a></nav>
+  <nav class="indice" aria-label="Práticas da sexta"><a href="#pratica1">Prática 1</a><a href="#receita">Receita completa</a><a href="#perfil">Perfil</a><a href="#md">O que é .md</a><a href="#pratica2">Prática 2</a><a href="#conectores">Conectores (MCP)</a><a href="#navegador">Navegador</a><a href="#pratica3">Prática 3</a><a href="#pratica4">Prática 4</a><a href="#livre">Prática livre</a><a href="#terminal">Terminal</a><a href="#erro-windows">Erro no Windows</a></nav>
 
   <div class="bloco">Bloco 2 · Aprender a conversar</div>
   <article class="card" id="pratica1">
@@ -301,7 +301,7 @@ code{overflow-wrap:anywhere}
         <div class="cx" data-p="mac" data-n="14" data-l="Instalar no Mac" data-t="Comando" id="n14"></div>
         <ol class="passos" start="3">
           <li><b>Espere.</b> Ele não mostra barra de progresso: parece parado, mas está baixando. Terminou quando aparecer <code>Claude Code successfully installed!</code></li>
-          <li><b>Feche e abra de novo.</b> Feche o Terminal (<code>Cmd + Q</code>) e abra outro, igual ao passo 1.</li>
+          <li><b>Feche e abra de novo. Obrigatório.</b> A janela que instalou não enxerga o programa novo. Feche o Terminal inteiro (<code>Cmd + Q</code>) e abra outro, igual ao passo 1.</li>
           <li><b>Confira.</b> Copie o 16, cole e Enter. Apareceu um número, tipo <code>2.1.211 (Claude Code)</code>? Instalado.</li>
         </ol>
       </div>
@@ -314,8 +314,8 @@ code{overflow-wrap:anywhere}
         <div class="cx" data-p="win" data-n="15" data-l="Instalar no Windows" data-t="Comando" id="n15"></div>
         <ol class="passos" start="3">
           <li><b>Espere.</b> Ele não mostra barra de progresso: parece parado, mas está baixando. Terminou quando aparecer <code>Claude Code successfully installed!</code></li>
-          <li><b>Feche e abra de novo.</b> Feche o PowerShell e abra outro, igual ao passo 1.</li>
-          <li><b>Confira.</b> Copie o 16, cole e Enter. Apareceu um número, tipo <code>2.1.211 (Claude Code)</code>? Instalado.</li>
+          <li><b>Feche e abra de novo. Obrigatório.</b> A janela que instalou não enxerga o programa novo. Feche <b>todas</b> as janelas do PowerShell (o X no canto) e abra uma nova, igual ao passo 1.</li>
+          <li><b>Confira.</b> Copie o 16, cole e Enter. Apareceu um número, tipo <code>2.1.211 (Claude Code)</code>? Instalado. Apareceu <code>não é reconhecido</code> em vermelho? Vá no cartão <a class="vai" href="#erro-windows">Deu erro no Windows?</a>: resolve em 2 minutos.</li>
         </ol>
       </div>
 
@@ -364,17 +364,16 @@ code{overflow-wrap:anywhere}
         </div>
         <div class="os-p" data-os="win" hidden>
           <dl>
-            <dt><code>'irm' is not recognized</code></dt>
+            <dt><code>'irm' não é reconhecido</code> ou <code>'irm' is not recognized</code></dt>
             <dd>Você está no CMD, não no PowerShell. Feche, abra o PowerShell (<code>Windows + X</code>) e cole o 15 de novo. Ou, no próprio CMD, use este:</dd>
           </dl>
           <div class="cx" data-p="wincmd" data-l="Se precisar · Windows, só no CMD" data-t="Comando"></div>
           <dl>
             <dt><code>The token '&amp;&amp;' is not a valid statement separator</code></dt>
             <dd>O contrário: você está no PowerShell com o comando do CMD. Use o 15.</dd>
-            <dt><code>'claude' is not recognized</code></dt>
-            <dd>Feche o PowerShell e abra um novo. Continuou? Copie e rode o comando abaixo, feche, abra outro PowerShell e tente <code>claude</code> de novo.</dd>
+            <dt><code>O termo 'claude' não é reconhecido</code> ou <code>'claude' is not recognized</code></dt>
+            <dd>Instalou, mas o Windows ainda não sabe onde o programa está. Passo a passo no cartão <a class="vai" href="#erro-windows">Deu erro no Windows?</a>, logo abaixo.</dd>
           </dl>
-          <div class="cx" data-p="pathwin" data-l="Se precisar · Windows" data-t="Comando"></div>
           <dl>
             <dt><code>Could not create SSL/TLS secure channel</code></dt>
             <dd>Windows 10 antigo. Rode o comando abaixo (ele já instala de novo).</dd>
@@ -389,6 +388,36 @@ code{overflow-wrap:anywhere}
       </details>
 
       <p class="alerta">Não deu? Sem problema: amanhã a gente instala junto na sala, no café da manhã das 8h. Aula às 9h.</p>
+    </div>
+  </article>
+
+  <article class="card" id="erro-windows">
+    <div class="card-h"><h2>Deu erro no Windows? Os 3 mais comuns</h2></div>
+    <div class="card-b">
+      <p>Instalou, apareceu <code>Claude Code successfully installed!</code>, mas o <code>claude</code> não abre? Ache a sua mensagem aqui. Tudo no PowerShell (a linha começa com <code>PS C:\</code>).</p>
+
+      <p><b>1 · <code>O termo 'claude' não é reconhecido…</code></b> (ou <code>'claude' is not recognized</code>, em vermelho)</p>
+      <p>É o erro de quase todo mundo. O programa está no computador; a janela do PowerShell que você usou pra instalar é que não enxerga ele ainda. Faça em ordem e pare quando funcionar:</p>
+      <ol class="passos">
+        <li><b>Feche todas as janelas do PowerShell</b> (o X no canto). Abra uma nova: <code>Windows + X</code> → Windows PowerShell. Digite <code>claude</code> e Enter. Abriu? Pronto.</li>
+        <li>Não abriu? Copie o comando abaixo, cole e Enter. Ele avisa o Windows onde o programa está (de uma vez por todas) e já testa. Apareceu um número de versão? Digite <code>claude</code> e Enter.</li>
+      </ol>
+      <div class="cx" data-p="pathwin" data-l="Avisar o Windows onde o claude está" data-t="Comando"></div>
+      <ol class="passos" start="3">
+        <li>Ainda não? Copie o comando abaixo: ele abre o Claude Code pelo endereço completo, sem depender de nada. Abriu? Use assim hoje, e amanhã às 8h a gente acerta o resto na sala.</li>
+      </ol>
+      <div class="cx" data-p="fullwin" data-l="Abrir pelo endereço completo" data-t="Comando"></div>
+      <p class="nota">O comando do endereço completo disse que <b>não existe</b> o arquivo (<code>não foi possível encontrar</code> / <code>does not exist</code>)? Então a instalação não terminou. Rode o 15 de novo, espere o <code>successfully installed</code> e volte ao passo 1.</p>
+
+      <p><b>2 · <code>O sistema não pode encontrar o caminho especificado</code></b> (ou <code>cannot find the path specified</code>)</p>
+      <p>O PowerShell abriu dentro de uma pasta que não existe mais (acontece com pasta do OneDrive ou do Drive). Copie o comando abaixo, cole e Enter: ele leva você pra sua pasta de usuário. Depois digite <code>claude</code> e Enter.</p>
+      <div class="cx" data-p="casa" data-l="Ir pra pasta de usuário" data-t="Comando"></div>
+      <p class="nota">Deu essa mensagem <b>durante a instalação</b>? Rode o comando acima, depois o 15 de novo.</p>
+
+      <p><b>3 · <code>'irm' não é reconhecido…</code></b> (ou <code>'irm' is not recognized</code>)</p>
+      <p>Você está no Prompt de Comando (CMD), não no PowerShell: a linha começa com <code>C:\</code>, sem o <code>PS</code>. Feche essa janela, aperte <code>Windows + X</code>, clique em <b>Windows PowerShell</b> (ou <b>Terminal</b>) e cole o 15 de novo. Depois, passo 4 e 5 do cartão de cima.</p>
+
+      <p class="alerta">Nenhum desses? Tire um print da tela inteira e mande no grupo da turma. E amanhã às 8h, no café, a gente instala junto. Aula às 9h.</p>
     </div>
   </article>
 
@@ -749,7 +778,9 @@ codex:`/plugin marketplace add openai/codex-plugin-cc
 erro:`[cole o print] Ache a causa, conserte e me mostre a prova de que resolveu.`,
 pathmac:`echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc`,
 wincmd:`curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`,
-pathwin:`$currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User'); [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\\.local\\bin", 'User')`,
+pathwin:`$d = "$env:USERPROFILE\\.local\\bin"; $env:PATH = "$d;$env:PATH"; [Environment]::SetEnvironmentVariable('PATH', "$([Environment]::GetEnvironmentVariable('PATH','User'));$d", 'User'); claude --version`,
+fullwin:`& "$env:USERPROFILE\\.local\\bin\\claude.exe"`,
+casa:`cd ~`,
 tlswin:`[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; irm https://claude.ai/install.ps1 | iex`,
 };
 const P26={"SOZINHO": "CONTEXTO: Vou usar você todo dia no meu trabalho, mas ainda não te contei nada sobre mim nem sobre o meu negócio.\nPÚBLICO: Eu. No próximo passo, esse resumo vira o meu perfil, que você lê no começo de toda conversa.\nINSUMOS: Só as minhas respostas. Vou responder escrevendo ou falando no microfone.\nOBJETIVO: Que você me conheça de verdade, pra eu não precisar me explicar de novo a cada conversa. O foco é o trabalho, mas também quero ajuda na vida pessoal.\nSUCESSO: Eu leio o resumo e penso: \"sou eu\".\nCONFERIR: Antes de entregar, confere se cada linha veio de uma resposta minha. O que eu não respondi, marca como FALTOU.\nTAREFA: Me entrevista. Começa pelo básico: o que eu faço, o que eu vendo, pra quem, e qual é o meu papel. Depois, as minhas dores: o que hoje mais me toma tempo, dá errado ou me tira o sono no trabalho. Em seguida, qual dessas é a dor principal e qual é o meu objetivo pros próximos meses. Depois cobre seis assuntos: o que é fixo no meu negócio, como eu decido, como você deve falar comigo, quando você age sem eu pedir, o que você nunca deve fazer e como eu gosto de receber as respostas. No fim, duas perguntas sobre a vida pessoal: como é a minha rotina fora do trabalho (família, casa, saúde) e o que mais pesa nela hoje.\nFORMATO: Uma pergunta por vez, curta, com um exemplo de resposta. No máximo quatorze. No fim, o resumo em seis blocos com esses nomes, mais \"Dores e objetivo\" e um bloco curto \"Vida pessoal\". Até 500 palavras. Depois do resumo, me sugere uma primeira tarefa simples pra gente fazer juntos essa semana, que ataque a dor principal.\nEXEMPLO: Como a ficha de um funcionário novo: curta, em tópicos.\nRESTRIÇÕES: Nada de inventar o que eu não disse. Nada de adjetivo vago (\"seja direto\"): cada regra vira uma frase que dá pra seguir. A vida pessoal só entra se eu quiser responder: se eu disser \"pula\", pula.\nANTES: Só escreve o resumo depois de terminar as perguntas. Começa agora pela primeira.", "CASAL": "CONTEXTO: Somos um casal e tocamos o negócio juntos. Vamos usar você todo dia no trabalho, mas ainda não te contamos nada sobre nós nem sobre o negócio.\nPÚBLICO: Nós dois. No próximo passo, esse resumo vira o perfil de cada um (cada um cola na sua conta) e mostra que somos dois decidindo.\nINSUMOS: Só as nossas respostas. Vamos responder juntos, escrevendo ou falando no microfone.\nOBJETIVO: Que você conheça os dois e como a gente divide o negócio, pra ajudar sem a gente precisar se explicar de novo, e pra sugerir planos que funcionem pros dois.\nSUCESSO: Os dois leem o resumo e pensam: \"somos nós\".\nCONFERIR: Antes de entregar, confere se cada linha veio de uma resposta nossa e se ficou claro quem cuida de quê. O que a gente não respondeu, marca como FALTOU.\nTAREFA: Entrevista nós dois. Começa pelo básico: o que fazemos, o que vendemos, pra quem, e o papel de cada um. Depois, as nossas dores: o que hoje mais toma tempo, dá errado ou tira o sono de cada um no negócio. Em seguida, qual é a dor principal e qual é o nosso objetivo pros próximos meses. Depois cobre seis assuntos: o que é fixo no negócio, como decidimos (sozinhos ou juntos, e quem dá a palavra final em quê), como você deve falar com cada um, quando você age sem pedir, o que você nunca deve fazer e como gostamos de receber as respostas. No fim, uma pergunta sobre a vida a dois: o que pesa hoje em conciliar casa e negócio.\nFORMATO: Uma pergunta por vez, curta, com um exemplo de resposta; quando a resposta puder ser diferente pra cada um, pergunta pros dois. No máximo dezesseis. No fim, o resumo em seis blocos com esses nomes, mais \"Dores e objetivo\", \"Quem cuida de quê\" e \"Vida a dois\". Até 500 palavras. Depois do resumo, sugere uma primeira tarefa simples pra fazermos juntos com você essa semana, que ataque a dor principal.\nEXEMPLO: Como a ficha de uma dupla de sócios nova: curta, em tópicos, com o nome de cada um quando for diferente.\nRESTRIÇÕES: Nada de inventar o que a gente não disse. Nada de adjetivo vago: cada regra vira uma frase que dá pra seguir. Se a gente discordar numa resposta, registra as duas visões em vez de escolher uma.\nANTES: Primeiro pergunta o nome dos dois. Só escreve o resumo depois de terminar as perguntas. Começa agora.", "TIME": "CONTEXTO: Estamos em um time da mesma empresa, fazendo isso juntos. Vamos usar você todo dia, mas ainda não te contamos nada sobre a empresa nem sobre quem faz o quê.\nPÚBLICO: O time inteiro. O resumo vai virar o \"manual do time\": a base que cada um cola no próprio perfil e que, mais tarde, vira o CLAUDE.md da pasta da empresa.\nINSUMOS: Só as nossas respostas. Uma pessoa digita; todo mundo responde, falando ou escrevendo.\nOBJETIVO: Que você conheça a empresa e o papel de cada um, pra qualquer pessoa do time conseguir pedir ajuda sem se explicar do zero.\nSUCESSO: Qualquer um do time lê o resumo e pensa: \"é assim que a gente trabalha\".\nCONFERIR: Antes de entregar, confere se cada linha veio de uma resposta nossa e se cada pessoa aparece com o seu papel. O que a gente não respondeu, marca como FALTOU.\nTAREFA: Entrevista o time. Começa pelo básico: o que a empresa faz, o que vende, pra quem, e quem está aqui (nome e função de cada um). Depois, as dores do time: o que hoje mais toma tempo ou dá errado no trabalho de cada um. Em seguida, qual é a dor principal da empresa e qual é o objetivo do time pros próximos meses. Depois cobre seis assuntos: o que é fixo na empresa, como o time decide (quem aprova o quê), como você deve falar com o time, quando você age sem pedir, o que você nunca deve fazer e como o time gosta de receber as respostas. No fim, uma pergunta: onde o trabalho mais trava entre uma pessoa e outra.\nFORMATO: Uma pergunta por vez, curta, com um exemplo de resposta. No máximo dezesseis. No fim, o resumo em seis blocos com esses nomes, mais \"Dores e objetivo\", \"Quem é quem\" e \"Onde trava\". Até 500 palavras. Depois do resumo, sugere uma primeira tarefa simples pro time fazer com você essa semana, que ataque a dor principal.\nEXEMPLO: Como a página de boas-vindas de um funcionário novo na empresa: curta, em tópicos.\nRESTRIÇÕES: Nada de inventar o que a gente não disse. Nada de adjetivo vago: cada regra vira uma frase que dá pra seguir. Nada de vida pessoal aqui: é o manual do time.\nANTES: Primeiro pergunta quem está no time. Só escreve o resumo depois de terminar as perguntas. Começa agora."};
