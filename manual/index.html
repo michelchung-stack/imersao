@@ -309,13 +309,12 @@ code{overflow-wrap:anywhere}
       <div class="os-p" data-os="win" hidden>
         <ol class="passos">
           <li><b>Abra o PowerShell.</b> Aperte <code>Windows + X</code> e clique em <b>Windows PowerShell</b> (ou <b>Terminal</b>). Confira: a linha tem que começar com <code>PS C:\</code>. Sem o <code>PS</code> na frente você está no Prompt de Comando (CMD): veja "Deu erro?" lá embaixo.</li>
-          <li><b>Instale.</b> Copie o comando 15, cole no PowerShell (<code>Ctrl + V</code> ou botão direito do mouse) e aperte Enter.</li>
+          <li><b>Instale.</b> Copie o comando 15 inteiro, cole no PowerShell (<code>Ctrl + V</code> ou botão direito do mouse) e aperte Enter. Ele instala, avisa o Windows onde o programa ficou e já confere.</li>
         </ol>
         <div class="cx" data-p="win" data-n="15" data-l="Instalar no Windows" data-t="Comando" id="n15"></div>
         <ol class="passos" start="3">
-          <li><b>Espere.</b> Ele não mostra barra de progresso: parece parado, mas está baixando. Terminou quando aparecer <code>Claude Code successfully installed!</code></li>
-          <li><b>Feche e abra de novo. Obrigatório.</b> A janela que instalou não enxerga o programa novo. Feche <b>todas</b> as janelas do PowerShell (o X no canto) e abra uma nova, igual ao passo 1.</li>
-          <li><b>Confira.</b> Copie o 16, cole e Enter. Apareceu um número, tipo <code>2.1.211 (Claude Code)</code>? Instalado. Apareceu <code>não é reconhecido</code> em vermelho? Vá no cartão <a class="vai" href="#erro-windows">Deu erro no Windows?</a>: resolve em 2 minutos.</li>
+          <li><b>Espere.</b> Ele não mostra barra de progresso: parece parado, mas está baixando. No meio aparece <code>Claude Code successfully installed!</code> e um aviso amarelo de PATH: ignore, o comando já resolve isso.</li>
+          <li><b>Confira.</b> A última linha é um número, tipo <code>2.1.310 (Claude Code)</code>? Instalado: digite <code>claude</code> e Enter. Apareceu <code>não é reconhecido</code> em vermelho? Feche todas as janelas do PowerShell, abra uma nova e cole o 16. Ainda não? Cartão <a class="vai" href="#erro-windows">Deu erro no Windows?</a>.</li>
         </ol>
       </div>
 
@@ -769,7 +768,7 @@ l2:`Com o que você já sabe de mim, quais três conectores (MCP) mais ajudam o 
 l3:`Agenda um resumo do meu e-mail pra toda segunda às 7h. Antes de salvar, me mostra como ficou.`,
 l4:`Com tudo o que eu te contei, quais três tarefas da minha semana você faria sozinho? Começa pela primeira agora e me chama só no fim.`,
 mac:`curl -fsSL https://claude.ai/install.sh | bash`,
-win:`irm https://claude.ai/install.ps1 | iex`,
+win:`irm https://claude.ai/install.ps1 | iex; $d = "$env:USERPROFILE\\.local\\bin"; $env:PATH = "$d;$env:PATH"; [Environment]::SetEnvironmentVariable('PATH', "$([Environment]::GetEnvironmentVariable('PATH','User'));$d", 'User'); claude --version`,
 ver:`claude --version`,
 git:`git --version`,
 model:`/model`,
