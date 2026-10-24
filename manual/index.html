@@ -308,7 +308,7 @@ code{overflow-wrap:anywhere}
 
       <div class="os-p" data-os="win" hidden>
         <ol class="passos">
-          <li><b>Abra o PowerShell.</b> Aperte <code>Windows + X</code> e clique em <b>Windows PowerShell</b> (ou <b>Terminal</b>). Confira: a linha tem que começar com <code>PS C:\</code>. Sem o <code>PS</code> na frente você está no Prompt de Comando (CMD): veja "Deu erro?" lá embaixo.</li>
+          <li><b>Abra o Windows PowerShell</b> (não o Prompt de Comando). Clique no menu <b>Iniciar</b>, digite <code>PowerShell</code> e aperte Enter. Abre uma janela azul ou preta. Confira: a linha tem que começar com <code>PS C:\</code>. Começou com <code>C:\</code> sem o <code>PS</code>? Essa é a janela errada (Prompt de Comando): feche e abra de novo pelo Iniciar.</li>
           <li><b>Instale.</b> Copie o comando 15 inteiro, cole no PowerShell (<code>Ctrl + V</code> ou botão direito do mouse) e aperte Enter. Ele instala, avisa o Windows onde o programa ficou e já confere.</li>
         </ol>
         <div class="cx" data-p="win" data-n="15" data-l="Instalar no Windows" data-t="Comando" id="n15"></div>
@@ -364,7 +364,7 @@ code{overflow-wrap:anywhere}
         <div class="os-p" data-os="win" hidden>
           <dl>
             <dt><code>'irm' não é reconhecido</code> ou <code>'irm' is not recognized</code></dt>
-            <dd>Você está no CMD, não no PowerShell. Feche, abra o PowerShell (<code>Windows + X</code>) e cole o 15 de novo. Ou, no próprio CMD, use este:</dd>
+            <dd>Você está no Prompt de Comando (CMD), não no PowerShell. Feche, abra o PowerShell (Iniciar → digite <code>PowerShell</code> → Enter) e cole o 15 de novo. Ou, no próprio CMD, use este:</dd>
           </dl>
           <div class="cx" data-p="wincmd" data-l="Se precisar · Windows, só no CMD" data-t="Comando"></div>
           <dl>
@@ -398,7 +398,7 @@ code{overflow-wrap:anywhere}
       <p><b>1 · <code>O termo 'claude' não é reconhecido…</code></b> (ou <code>'claude' is not recognized</code>, em vermelho)</p>
       <p>É o erro de quase todo mundo. O programa está no computador; a janela do PowerShell que você usou pra instalar é que não enxerga ele ainda. Faça em ordem e pare quando funcionar:</p>
       <ol class="passos">
-        <li><b>Feche todas as janelas do PowerShell</b> (o X no canto). Abra uma nova: <code>Windows + X</code> → Windows PowerShell. Digite <code>claude</code> e Enter. Abriu? Pronto.</li>
+        <li><b>Feche todas as janelas do PowerShell</b> (o X no canto). Abra uma nova: Iniciar → digite <code>PowerShell</code> → Enter. Digite <code>claude</code> e Enter. Abriu? Pronto.</li>
         <li>Não abriu? Copie o comando abaixo, cole e Enter. Ele avisa o Windows onde o programa está (de uma vez por todas) e já testa. Apareceu um número de versão? Digite <code>claude</code> e Enter.</li>
       </ol>
       <div class="cx" data-p="pathwin" data-l="Avisar o Windows onde o claude está" data-t="Comando"></div>
@@ -414,7 +414,7 @@ code{overflow-wrap:anywhere}
       <p class="nota">Deu essa mensagem <b>durante a instalação</b>? Rode o comando acima, depois o 15 de novo.</p>
 
       <p><b>3 · <code>'irm' não é reconhecido…</code></b> (ou <code>'irm' is not recognized</code>)</p>
-      <p>Você está no Prompt de Comando (CMD), não no PowerShell: a linha começa com <code>C:\</code>, sem o <code>PS</code>. Feche essa janela, aperte <code>Windows + X</code>, clique em <b>Windows PowerShell</b> (ou <b>Terminal</b>) e cole o 15 de novo. Depois, passo 4 e 5 do cartão de cima.</p>
+      <p>Você está no Prompt de Comando (CMD), não no PowerShell: a linha começa com <code>C:\</code>, sem o <code>PS</code>. Feche essa janela, clique no menu <b>Iniciar</b>, digite <code>PowerShell</code>, Enter, e cole o 15 de novo. A linha tem que começar com <code>PS</code>.</p>
 
       <p class="alerta">Nenhum desses? Tire um print da tela inteira e mande no grupo da turma. E amanhã às 8h, no café, a gente instala junto. Aula às 9h.</p>
     </div>
@@ -433,7 +433,7 @@ code{overflow-wrap:anywhere}
       <p class="nota">Ainda falta instalar algo? <a class="vai" href="#terminal">Passo a passo da preparação</a>.</p>
       <p class="alerta"><b>A pasta do sistema fica em Documentos</b>, fora do Google Drive: a sincronização do Drive estraga o Git. Crie em Documentos uma pasta chamada <code>meu-primeiro-sistema</code>.</p>
       <p><b>Abrir o terminal na pasta certa</b></p>
-      <ol class="passos"><li><b>Windows:</b> ache a pasta <code>meu-primeiro-sistema</code> em Documentos, botão direito do mouse em cima dela e clique em <b>Open in Terminal</b> (o Windows 11 mostra esse nome em inglês mesmo em português).</li><li><b>Mac:</b> arraste a pasta pro ícone do Terminal no Dock. Ou botão direito na pasta → Serviços → <b>Novo Terminal na Pasta</b> (vem desligado em alguns Macs: Ajustes do Sistema → Teclado → Atalhos de Teclado → Serviços → Arquivos e Pastas).</li><li><b>Confira:</b> a janela abre com o nome da pasta. Digite <code>claude</code> e Enter. Perguntou se confia na pasta? Sim.</li></ol>
+      <ol class="passos"><li><b>Windows:</b> ache a pasta <code>meu-primeiro-sistema</code> em Documentos, botão direito do mouse em cima dela e clique em <b>Open in Terminal</b> (o Windows 11 mostra esse nome em inglês mesmo em português). Não apareceu? Iniciar → digite <code>PowerShell</code> → Enter, e dentro dele cole <code>cd ~\Documents\meu-primeiro-sistema</code>. A linha tem que começar com <code>PS</code>.</li><li><b>Mac:</b> arraste a pasta pro ícone do Terminal no Dock. Ou botão direito na pasta → Serviços → <b>Novo Terminal na Pasta</b> (vem desligado em alguns Macs: Ajustes do Sistema → Teclado → Atalhos de Teclado → Serviços → Arquivos e Pastas).</li><li><b>Confira:</b> a janela abre com o nome da pasta. Digite <code>claude</code> e Enter. Perguntou se confia na pasta? Sim.</li></ol>
       <p><b>Faz junto: diga oi</b>. Com o Claude Code aberto, escreva com as suas palavras, sem copiar: <i>"Oi! Que pasta é essa? O que você consegue fazer aqui?"</i> e depois <i>"O que você acha importante eu saber pra começar?"</i>. Fale normal, como ontem no app.</p>
     </div>
   </article>
