@@ -524,7 +524,7 @@ code{overflow-wrap:anywhere}
   <article class="card" id="equipe">
     <div class="card-h"><h2>A equipe da obra</h2><span class="s">vários terminais e /goal</span></div>
     <div class="card-b">
-      <p>Demonstração: um terminal constrói, outro revisa, e o <code>/goal</code> só para quando a conta bate.</p>
+      <p>Demonstração: um terminal constrói, outro revisa, e o <code>/goal</code> só para quando a conta bate. A cada rodada um segundo Claude lê a conversa e diz "ainda não", "cumprida" ou "impossível".</p>
       <p class="nota">O <code>/goal</code> volta no <a class="vai" href="#passo4">Passo 4</a>. Dois terminais é <a class="vai" href="#bonus">bônus da tarde</a>.</p>
     </div>
   </article>
@@ -562,7 +562,7 @@ code{overflow-wrap:anywhere}
         <div><b>Harness</b><span>o canteiro, com as ferramentas e as regras.</span></div>
         <div><b>Spec-driven</b><span>o projeto no papel antes da parede.</span></div>
         <div><b>Loop</b><span>faz, confere, refaz.</span></div>
-        <div><b>Goal (<code>/goal</code>)</b><span>só para quando cumprir a meta. Sempre com "ou para em N turnos".</span></div>
+        <div><b>Goal (<code>/goal</code>)</b><span>só para quando cumprir a meta. Quem confere é um segundo Claude, lendo a conversa: a meta tem que dar pra provar na tela ("os 3 números batem", "a página abre sem erro"), não "deixa bonito". Sempre com "ou para em N turnos". <code>/goal</code> sozinho mostra onde está; <code>/goal clear</code> para.</span></div>
         <div><b>Graph</b><span>o cronograma de várias equipes (workflow).</span></div>
         <div><b>Vários terminais</b><span>um constrói, o outro lê. Worktree precisa do Git.</span></div>
         <div><b>Computador ligado</b><span><code>/loop</code> e segundo plano precisam dele; rotina e Projetos rodam na nuvem.</span></div>
@@ -615,7 +615,7 @@ code{overflow-wrap:anywhere}
     <div class="card-b">
       <p>Sessão nova, <code>Shift+Tab</code> até <b>auto mode on</b>. Cole o 25.</p>
       <div class="cx" data-p="s25" data-n="25" data-l="Comece a construir"></div>
-      <p>Em seguida, cole o comando abaixo: ele só para quando a conta bater.</p>
+      <p>Em seguida, cole o comando abaixo: ele só para quando a conta bater (precisa do auto mode on pra rodar sozinho). Quer ver onde está? <code>/goal</code> sem nada. Quer parar? <code>/goal clear</code>.</p>
       <div class="cx" data-p="goal" data-l="/goal" data-t="Comando"></div>
     </div>
   </article>
