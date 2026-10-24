@@ -506,7 +506,7 @@ code{overflow-wrap:anywhere}
   <article class="card" id="projeto">
     <div class="card-h"><h2>O projeto</h2><span class="s">da ideia à proposta</span></div>
     <div class="card-b">
-      <p>Você sai com o método que vai usar à tarde: ideia, proposta, execução, acompanhamento.</p>
+      <p>Você sai com o método que vai usar à tarde, quatro passos até a obra: brainstorm, mockup, spec, revisão.</p>
       <p class="nota">A prática deste bloco é à tarde: <a class="vai" href="#passo1">Passos 1 a 3</a>.</p>
     </div>
   </article>
@@ -598,16 +598,16 @@ code{overflow-wrap:anywhere}
     </div>
   </article>
   <article class="card" id="passo3">
-    <div class="card-h"><h2>Passo 3 · A proposta</h2><span class="s">primeiro o back, depois o front</span></div>
+    <div class="card-h"><h2>Passo 3 · A proposta</h2><span class="s">primeiro o mockup, depois a spec</span></div>
     <div class="card-b">
-      <p>Antes de colar: <code>Shift+Tab</code> até <b>plan mode on</b>.</p>
-      <div class="cx" data-p="s22" data-n="22" data-l="A proposta: back-end"></div>
-      <div class="cx" data-p="s23" data-n="23" data-l="A proposta: front-end e LEIAME"></div>
+      <p>Fique em <b>auto mode on</b> (o mockup precisa gravar arquivo). Cole o 22, abra a página no navegador e diga o que entra e o que sai. Aprovou? Cole o 23.</p>
+      <div class="cx" data-p="s22" data-n="22" data-l="A proposta: mockup"></div>
+      <div class="cx" data-p="s23" data-n="23" data-l="A proposta: spec e LEIAME"></div>
       <p><b>O segundo olhar</b>: abra uma sessão nova e cole o 24. Quem escreveu não revisa.</p>
       <div class="cx" data-p="s24" data-n="24" data-l="O segundo olhar (sessão nova)"></div>
       <p>Depois volte na primeira sessão e peça:</p>
       <div class="cx" data-p="s24b" data-l="Corrigir a spec"></div>
-      <p class="nota">Sai com: spec.html revisada e o LEIAME.md.</p>
+      <p class="nota">Sai com: mockup aprovado, spec.html revisada e o LEIAME.md.</p>
     </div>
   </article>
   <article class="card" id="passo4">
@@ -692,8 +692,8 @@ aviso:"Crie no meu ~/.claude/settings.json um hook Notification que me avise qua
 insights:"/insights",
 s20:"Leia o CONTEXTO.md e a planilha da pasta dados. Me entreviste, uma pergunta de cada vez, até a gente achar as 3 perguntas sobre a minha empresa que eu quero ver respondidas toda semana. Pra cada uma, anote que número responde, quem olha e de quanto em quanto tempo. No fim, grave as 3 perguntas no CONTEXTO.md e me mostre.",
 s21:"Pra cada uma das 3 perguntas do CONTEXTO.md, me diga que dado eu preciso, de onde ele vem (planilha, sistema, marketplace, banco) e de quanto em quanto tempo ele muda. Olhe a planilha da pasta dados e separe o que eu já tenho do que falta. Desenhe as tabelas e como elas se ligam, como uma figura numa página. Grave o mapa no CONTEXTO.md.",
-s22:"Vamos montar a proposta do meu sistema, começando pelo back-end. Use o CONTEXTO.md. Escreva as tabelas e as colunas, de onde vem cada dado e como ele entra, a regra de cálculo de cada número e como eu confiro que o número está certo. Me faça as perguntas que faltarem, uma de cada vez. Ainda não construa nada.",
-s23:"Agora o front-end: cada tela, quem olha, que pergunta ela responde e qual número aparece primeiro. Junte o back-end e o front-end numa spec.html e me mostre como página. No fim, me explique o sistema como pra uma criança de 10 anos e grave no LEIAME.md.",
+s22:"Leia o CONTEXTO.md. Antes da spec, faça um mockup: uma página HTML só pra eu ver como seria a tela do meu sistema, com dados de exemplo, sem instalar nada. Me diga como abrir no navegador. Eu vou dizer o que entra e o que sai; ajuste até eu aprovar. Ainda não construa nada de verdade.",
+s23:"Mockup aprovado. Agora escreva a spec.html: cada tela e que pergunta ela responde, de onde vem cada dado (planilha, sistema, marketplace), as tabelas e colunas, a regra de cálculo de cada número e como eu confiro que está certo. Me faça as perguntas que faltarem, uma de cada vez. No fim, me explique o sistema como pra uma criança de 10 anos e grave no LEIAME.md. Ainda não construa nada.",
 s24:"Revise a spec.html. Só leia e me aponte o que falta ou pode dar errado.",
 s24b:"Corrija a spec com estes pontos: [cole a lista]",
 s25:"Leia a spec.html e o CONTEXTO.md. Construa só a primeira tela: uma página HTML lendo a planilha da pasta dados, sem instalar nada. Ao terminar, me mostre a prova.",
