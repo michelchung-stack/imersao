@@ -424,7 +424,7 @@ code{overflow-wrap:anywhere}
 </section>
 
 <section id="sabado" role="tabpanel" aria-labelledby="t-sabado" hidden style="display:flex;flex-direction:column;gap:22px">
-  <nav class="indice" aria-label="Blocos do sábado"><a href="#terreno">O terreno</a><a href="#modos">Modos</a><a href="#salva">Salva o contexto</a><a href="#planta">A planta</a><a href="#ferramentas">As ferramentas</a><a href="#projeto">O projeto</a><a href="#equipe">A equipe da obra</a><a href="#construcao">A construção</a><a href="#vistoria">A vistoria</a><a href="#tarde">A tarde</a><a href="#bonus">Bônus</a><a href="#depois">Depois da imersão</a></nav>
+  <nav class="indice" aria-label="Blocos do sábado"><a href="#terreno">O terreno</a><a href="#modos">Modos</a><a href="#salva">Salva o contexto</a><a href="#planta">A planta</a><a href="#ferramentas">As ferramentas</a><a href="#projeto">O projeto</a><a href="#equipe">A equipe da obra</a><a href="#construcao">A construção</a><a href="#tarde">O seu sistema</a><a href="#bonus">Bônus</a><a href="#vistoria">A vistoria</a><a href="#depois">Depois da imersão</a></nav>
 
   <div class="bloco">Manhã · Bloco 1</div>
   <article class="card" id="terreno">
@@ -507,7 +507,7 @@ code{overflow-wrap:anywhere}
     <div class="card-h"><h2>O projeto</h2><span class="s">da ideia à proposta</span></div>
     <div class="card-b">
       <p>Você sai com o método que vai usar à tarde, quatro passos até a obra: brainstorm, mockup, spec, revisão.</p>
-      <p class="nota">A prática deste bloco é à tarde: <a class="vai" href="#passo1">Passos 1 a 3</a>.</p>
+      <p class="nota">A prática deste bloco é à tarde: <a class="vai" href="#tarde">O seu sistema</a>.</p>
     </div>
   </article>
   <article class="card" id="clear">
@@ -525,7 +525,7 @@ code{overflow-wrap:anywhere}
     <div class="card-h"><h2>A equipe da obra</h2><span class="s">vários terminais e /goal</span></div>
     <div class="card-b">
       <p>Demonstração: um terminal constrói, outro revisa, e o <code>/goal</code> só para quando a conta bate. A cada rodada um segundo Claude lê a conversa e diz "ainda não", "cumprida" ou "impossível".</p>
-      <p class="nota">O <code>/goal</code> volta no <a class="vai" href="#passo4">Passo 4</a>. Dois terminais é <a class="vai" href="#bonus">bônus da tarde</a>.</p>
+      <p class="nota">O <code>/goal</code> volta à tarde, em <a class="vai" href="#passo4">Comece a construir</a>. Dois terminais é <a class="vai" href="#bonus">bônus da tarde</a>.</p>
     </div>
   </article>
   <article class="card" id="estados">
@@ -544,15 +544,6 @@ code{overflow-wrap:anywhere}
       <p>Você sai entendendo como um sistema é feito por dentro: a frente (front-end, a tela que você vê), o que fica atrás (back-end: planilha, conta, banco de dados) e o SQL. Ninguém cria conta hoje: GitHub, Supabase e Vercel são o próximo andar.</p>
     </div>
   </article>
-  <div class="bloco">Manhã · Bloco 7</div>
-  <article class="card" id="vistoria">
-    <div class="card-h"><h2>A vistoria</h2><span class="s">revisão e segurança</span></div>
-    <div class="card-b">
-      <p>Confiança no número e segurança pra quando você subir pro GitHub e pro Supabase.</p>
-      <p class="nota">A vistoria do seu sistema é <a class="vai" href="#bonus">bônus da tarde</a>.</p>
-    </div>
-  </article>
-
   <article class="card" id="engenharias">
     <div class="card-h"><h2>As engenharias da obra</h2><span class="s">em uma linha</span></div>
     <div class="card-b">
@@ -573,23 +564,27 @@ code{overflow-wrap:anywhere}
     </div>
   </article>
 
-  <div class="bloco">Tarde · a sua obra em 4 passos</div>
+  <div class="bloco">Tarde · Bloco 7 · O seu sistema</div>
   <article class="card" id="tarde">
-    <div class="card-h"><h2>Como a tarde funciona</h2><span class="s">cada um no seu</span></div>
+    <div class="card-h"><h2>Agora, no seu sistema</h2><span class="s">mão na massa: Brainstorm → Mockup → Spec → Revisão</span></div>
     <div class="card-b">
-      <p>Cada um no seu computador, um passo por vez. Pergunte pro Claude primeiro, depois levante a mão.</p>
-      <p><b>O mínimo é a proposta</b>: a spec.html revisada numa sessão nova. Construir a primeira tela é bônus de quem chegar lá.</p>
+      <p>Cada um no seu computador, com o mesmo método da manhã: <b>Brainstorm</b> (clareza e dados) → <b>Mockup</b> (a tela pra olhar) → <b>Spec</b> (o projeto no papel) → <b>Revisão</b> (um segundo olhar).</p>
+      <ol class="passos">
+        <li><b>Prompts 20 a 24, aqui no manual:</b> copie, cole, responda.</li>
+        <li><b>Travou?</b> Print, cola e pede a prova. Depois levante a mão.</li>
+        <li><b>Mínimo do dia:</b> a spec revisada. Terminou? <a class="vai" href="#bonus">Bônus</a>.</li>
+      </ol>
     </div>
   </article>
   <article class="card" id="passo1">
-    <div class="card-h"><h2>Passo 1 · Clareza</h2><span class="s">que pergunta eu quero responder?</span></div>
+    <div class="card-h"><h2>Brainstorm · Clareza</h2><span class="s">que pergunta eu quero responder?</span></div>
     <div class="card-b">
       <p>Sai com: 3 perguntas no CONTEXTO.md.</p>
       <div class="cx" data-p="s20" data-n="20" data-l="Clareza"></div>
     </div>
   </article>
   <article class="card" id="passo2">
-    <div class="card-h"><h2>Passo 2 · Os dados</h2><span class="s">que dado responde cada pergunta?</span></div>
+    <div class="card-h"><h2>Brainstorm · Os dados</h2><span class="s">que dado responde cada pergunta?</span></div>
     <div class="card-b">
       <p>Sai com: o mapa dos dados (tabelas e colunas).</p>
       <p class="nota">Não trouxe planilha? Baixe uma de exemplo e solte na pasta <code>dados</code>.</p>
@@ -598,7 +593,7 @@ code{overflow-wrap:anywhere}
     </div>
   </article>
   <article class="card" id="passo3">
-    <div class="card-h"><h2>Passo 3 · A proposta</h2><span class="s">primeiro o mockup, depois a spec</span></div>
+    <div class="card-h"><h2>Mockup, Spec e Revisão</h2><span class="s">primeiro o mockup, depois a spec, depois o segundo olhar</span></div>
     <div class="card-b">
       <p>Fique em <b>auto mode on</b> (o mockup precisa gravar arquivo). Cole o 22, abra a página no navegador e diga o que entra e o que sai. Aprovou? Cole o 23.</p>
       <div class="cx" data-p="s22" data-n="22" data-l="A proposta: mockup"></div>
@@ -611,7 +606,7 @@ code{overflow-wrap:anywhere}
     </div>
   </article>
   <article class="card" id="passo4">
-    <div class="card-h"><h2>Passo 4 · Comece a construir</h2><span class="s">a primeira tela, com o seu dado</span></div>
+    <div class="card-h"><h2>Spec revisada? Comece a construir</h2><span class="s">a primeira tela, com o seu dado</span></div>
     <div class="card-b">
       <p>Sessão nova, <code>Shift+Tab</code> até <b>auto mode on</b>. Cole o 25.</p>
       <div class="cx" data-p="s25" data-n="25" data-l="Comece a construir"></div>
@@ -637,11 +632,17 @@ code{overflow-wrap:anywhere}
       <p><b>Dois terminais</b>. Terminal 1: <code>/rename pedreiro</code> e cole o 26. Terminal 2, na mesma pasta: <code>/rename fiscal</code> e cole o 27.</p>
       <div class="cx" data-p="s26" data-n="26" data-l="Dois terminais · pedreiro"></div>
       <div class="cx" data-p="s27" data-n="27" data-l="Dois terminais · fiscal (só lê)"></div>
-      <p><b>A vistoria do seu sistema</b>.</p>
+      <p><b>A vistoria do seu sistema</b>: <a class="vai" href="#vistoria">cartão abaixo</a>, prompts 28 e 29.</p>
+      <p><b>Vire uma habilidade (skill)</b>: o método de hoje (Brainstorm → Mockup → Spec → Revisão) vira a sua receita pro próximo sistema.</p>
+      <div class="cx" data-p="s30" data-n="30" data-l="Vire uma habilidade (skill)"></div>
+    </div>
+  </article>
+  <article class="card" id="vistoria">
+    <div class="card-h"><h2>A vistoria do seu sistema</h2><span class="s">bônus · revisão e segurança</span></div>
+    <div class="card-b">
+      <p>Confiança no número e segurança pra quando você subir pro GitHub e pro Supabase. Sessão nova pra cada um.</p>
       <div class="cx" data-p="s28" data-n="28" data-l="Vistoria · o número bate"></div>
       <div class="cx" data-p="s29" data-n="29" data-l="Vistoria · nenhuma chave"></div>
-      <p><b>Vire uma habilidade (skill)</b>: os 4 passos de hoje viram a sua receita pro próximo sistema.</p>
-      <div class="cx" data-p="s30" data-n="30" data-l="Vire uma habilidade (skill)"></div>
     </div>
   </article>
   <div class="bloco">Fechamento</div>
