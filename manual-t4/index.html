@@ -802,7 +802,7 @@ document.querySelectorAll(".cx").forEach(el=>{
     try{navigator.clipboard.writeText(t).then(ok,falha)}catch(e){falha()}
   }));
 });
-const SLIDES={antes:"",quinta:""}; // link dos slides do aluno: preencher quando o deck da quinta publicar
+const SLIDES={antes:"",quinta:"https://claude.ai/artifact/UCr8neYLJCW4EG1F3njaWz"}; // deck da quinta (sem notas), thread do deck 28/10
 const DIAS=["antes","quinta"];
 function abre(dia){
   DIAS.forEach(d=>{const on=d===dia;document.getElementById(d).hidden=!on;document.getElementById("t-"+d).setAttribute("aria-selected",on)});
