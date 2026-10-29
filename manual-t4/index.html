@@ -128,7 +128,7 @@ code{overflow-wrap:anywhere}
   <span class="turma">Turma 4 · quinta, 29 de outubro</span>
   <span class="kicker">Imersão Claude Code · um dia, no terminal</span>
   <h1>Manual da aula</h1>
-  <p class="muted">Abra no notebook. Cada prática tem o prompt pronto: clique em <b>Copiar prompt</b>, cole no Claude Code e troque o que está <span class="br">[entre colchetes]</span>. Este manual é só desta turma; os números dos prompts começam do 1.</p>
+  <p class="muted">Abra no notebook. Quando o telão mostrar <b>Prompt nº</b>, ele está aqui pronto: clique em <b>Copiar prompt</b>, cole no Claude Code e troque o que está <span class="br">[entre colchetes]</span>. O resto você pede com as suas palavras, como no telão. Este manual é só desta turma.</p>
   <div class="info"><span>Wi-fi: <b>Weworkguest</b></span><span>Travou? <b>Levanta a mão</b>, a equipe R2 vai até você.</span></div>
 </div></header>
 
@@ -334,13 +334,6 @@ code{overflow-wrap:anywhere}
       <div class="cx" data-p="cont" data-l="Voltar na última conversa" data-t="Comando"></div>
     </div>
   </article>
-  <article class="card" id="arrumar">
-    <div class="card-h"><h2>Pra ele arrumar, ele precisa achar</h2><span class="s">primeiro pedido de implementação</span></div>
-    <div class="card-b">
-      <p>Pasta bagunçada (planilha final v3 (2).xlsx, IMG_2041.jpg, Sem título.docx) vira pasta com nome, dono e um CONTEXTO.md dizendo o que é cada coisa em uma linha. Abra o terminal numa pasta sua que está bagunçada (Downloads serve, ou a pasta Empresa do Drive) e cole o 4. Ele só propõe; mexe depois do seu ok.</p>
-      <div class="cx" data-p="arruma" data-n="4" data-l="Arruma a minha pasta" id="n4"></div>
-    </div>
-  </article>
   <article class="card" id="ensina">
     <div class="card-h"><h2>Não sabe? Ele ensina. E faz.</h2><span class="s">toda dúvida tem o mesmo primeiro passo</span></div>
     <div class="card-b">
@@ -350,20 +343,15 @@ code{overflow-wrap:anywhere}
   </article>
   <div class="bloco">Manhã · Bloco 2 · A planta</div>
   <article class="card" id="config">
-    <div class="card-h"><h2>Deixe ele andar sozinho. Com rédea.</h2><span class="s">a configuração que a gente recomenda</span></div>
+    <div class="card-h"><h2>Só 3 coisas. O resto ele configura.</h2><span class="s">a configuração que a gente recomenda</span></div>
     <div class="card-b">
-      <p>Autonomia é configuração, não coragem. Seis ajustes:</p>
+      <p>Autonomia é configuração, não coragem. Você mexe em três coisas; o resto ele configura por você quando você pedir.</p>
       <div class="ficha">
-        <div><b>Modo automático</b><span>já é o padrão; <code>Shift+Tab</code> muda.</span></div>
+        <div><b>Modo automático</b><span>já vem assim; <code>Shift+Tab</code> troca.</span></div>
         <div><b>Opus 5.5 · esforço alto</b><span><code>/model</code> e <code>/effort</code>.</span></div>
-        <div><b>O que ele pode sem perguntar</b><span>lista no <code>.claude/settings.json</code> da pasta: ele mesmo escreve.</span></div>
-        <div><b>Aviso quando ele parar</b><span>hook de notificação: toca um som.</span></div>
-        <div><b>/usage de hora em hora</b><span>a cota de 5 h é sua.</span></div>
         <div><b>/clear a cada tarefa nova</b><span>mesa limpa, cota poupada.</span></div>
       </div>
-      <p><b>Faz junto: cole o 5</b> no terminal da pasta <code>meu-primeiro-sistema</code>. Ele mostra cada arquivo antes de salvar; leia e aceite.</p>
-      <div class="cx" data-p="config" data-n="5" data-l="Configure o meu terminal" id="n5"></div>
-      <p class="nota">Quer ver ou mudar depois? <code>/permissions</code> mostra o que ele pode sem perguntar; <code>/config</code> abre o resto.</p>
+      <p class="nota">Permissões da pasta e aviso sonoro: a gente faz junto na aula, no terminal. Quer ver ou mudar depois? <code>/permissions</code> mostra o que ele pode sem perguntar; <code>/config</code> abre o resto.</p>
     </div>
   </article>
 <article class="card" id="modos">
@@ -373,8 +361,7 @@ code{overflow-wrap:anywhere}
       <p><b>/model</b> escolhe o cérebro e <b>/effort</b> quanto ele pensa (abre um seletor). O caro pensa (Opus 5.5: planeja, revisa), o barato executa (Sonnet 5.5, Haiku 5.5). Pro: cota apertando? <code>/model</code> Sonnet e <code>/effort</code> médio. Fora do ciclo do Shift+Tab existe o <i>bypass permissions</i> (libera tudo). Nunca.</p>
       <div class="cx" data-p="model" data-l="Trocar o cérebro" data-t="Comando"></div>
       <div class="cx" data-p="effort" data-l="Trocar o esforço" data-t="Comando"></div>
-      <p><b>Faz junto: o número na tela</b>. Cole o 6. Passou de 45%? Diga "salva o contexto" e depois <code>/clear</code>.</p>
-      <div class="cx" data-p="s19" data-n="6" data-l="O número na tela"></div>
+      <p><b>O número na tela</b> (<code>/statusline</code>) a gente faz junto, no terminal. Passou de 45%? Diga "salva o contexto" e depois <code>/clear</code>.</p>
     </div>
   </article>
 <article class="card" id="salva">
@@ -442,8 +429,7 @@ code{overflow-wrap:anywhere}
       <p><b>Dois lugares, duas peças.</b> Repo é onde guarda (a prateleira dos outros, ou a sua, com chave). Plugin é a caixa pronta que você instala (habilidades + conectores): <code>/plugin</code>. Conector (MCP) é o plugue que liga o Claude a uma ferramenta: <code>/mcp</code>, os mesmos do app.</p>
       <p><b>Repo de estranho é código de estranho.</b> Instalar é deixar entrar na sua casa. Os mais estrelados são pra conhecer; na sala só se instala da loja oficial. Antes: <a class="vai" href="#seguranca">audite o que já está instalado</a>.</p>
       <p><b>A ficha do superpowers.</b> É um método de trabalho pronto: entende o pedido, faz o plano, executa e revisa. Por isso é o primeiro plugin.</p>
-      <p><b>Faz junto: instale a primeira, da loja oficial</b>, no terminal da pasta <code>meu-primeiro-sistema</code>. Cole o 10 e deixe o Claude instalar. Pediu permissão? Aceite. Depois recarregue com o comando.</p>
-      <div class="cx" data-p="plugin" data-n="10" data-l="Instalar o superpowers" id="n10"></div>
+      <p><b>Faz junto: instale a primeira, da loja oficial</b>, no terminal da pasta <code>meu-primeiro-sistema</code>. O pedido está no telão: peça pra ele instalar o <b>superpowers</b> da loja oficial da Anthropic (<code>claude-plugins-official</code>) e avisar quando acabar. Pediu permissão? Aceite. Depois recarregue com o comando.</p>
       <div class="cx" data-p="reload" data-l="Recarregar os plugins" data-t="Comando"></div>
     </div>
   </article>
@@ -455,8 +441,7 @@ code{overflow-wrap:anywhere}
         <li><b>Olhe antes:</b> autor, hooks, scripts, pra onde manda dado. A ficha do plugin diz tudo isso.</li>
         <li><b>A sua skill é segura:</b> você escreveu, você sabe o que faz.</li>
       </ol>
-      <p><b>Faz junto: a auditoria.</b> Abra uma sessão nova do Claude Code numa pasta de projeto (nunca na raiz do Drive ou do disco) e cole o 9. Ele lista tudo que está instalado no app e no terminal e classifica em ok, atenção ou remover, num relatório com data. Só leitura: ele não desinstala nada sem você.</p>
-      <div class="cx" data-p="audit" data-n="9" data-l="Audite minhas skills e plugins" id="n9"></div>
+      <p><b>Faz junto: a auditoria.</b> Abra uma sessão nova do Claude Code numa pasta de projeto (nunca na raiz do Drive ou do disco) e peça, como no telão: <i>"audite minhas skills e plugins"</i>. Ele lista tudo que está instalado no app e no terminal e classifica em ok, atenção ou remover, num relatório com data. Só leitura: ele não desinstala nada sem você.</p>
     </div>
   </article>
   <div class="bloco">Manhã · Bloco 4 · O projeto</div>
@@ -489,8 +474,7 @@ code{overflow-wrap:anywhere}
     <div class="card-h"><h2>Quatro estados, um aviso</h2><span class="s">quando ele precisa de você</span></div>
     <div class="card-b">
       <p><b>Trabalhando:</b> deixa ele. <b>Esperando você:</b> responda. <b>Ocioso:</b> terminou, espera o próximo. <b>Finalizado:</b> <code>/exit</code> ou fecha a janela.</p>
-      <p><b>O aviso</b> já veio no Prompt 5 (configuração). Pulou? Cole este no Claude Code. Ele só toca quando você está longe: pedido de permissão parado uns 6 segundos, ou parado sem resposta por 1 minuto.</p>
-      <div class="cx" data-p="aviso" data-l="Um aviso quando ele precisar de você"></div>
+      <p><b>Faz junto: o aviso</b>. Peça no Claude Code, como no telão: <i>"me avise com som quando precisar de mim"</i>. Ele só toca quando você está longe: pedido de permissão parado uns 6 segundos, ou parado sem resposta por 1 minuto.</p>
       <p class="nota">Terminal novo (Ghostty, Kitty, iTerm2) já manda aviso do sistema sem configurar nada, e a aba do terminal mostra o estado.</p>
     </div>
   </article>
@@ -538,7 +522,7 @@ code{overflow-wrap:anywhere}
     <div class="card-b">
       <p>Cada um no seu computador, com o mesmo método da manhã: <b>Brainstorm</b> (clareza e dados) → <b>Mockup</b> (a tela pra olhar) → <b>Spec</b> (o projeto no papel) → <b>Revisão</b> (um segundo olhar).</p>
       <ol class="passos">
-        <li><b>Prompts 11 a 15, aqui no manual:</b> copie, cole, responda.</li>
+        <li><b>Os passos estão aqui no manual;</b> o pedido de cada um, no telão. Só o segundo olhar tem prompt pronto (15).</li>
         <li><b>Travou?</b> Print, cola e pede a prova. Depois levante a mão.</li>
         <li><b>Mínimo do dia:</b> a spec revisada. Terminou? <a class="vai" href="#bonus">Bônus</a>.</li>
       </ol>
@@ -547,37 +531,33 @@ code{overflow-wrap:anywhere}
 <article class="card" id="passo1">
     <div class="card-h"><h2>Brainstorm · Clareza</h2><span class="s">que pergunta eu quero responder?</span></div>
     <div class="card-b">
+      <p>Peça: <i>"vamos pensar antes de mexer: quero [o seu sistema]. Me entrevista, uma pergunta de cada vez, até a gente achar as 3 perguntas que eu quero ver respondidas toda semana. Grave no CONTEXTO.md."</i> Com superpowers ele puxa o brainstorm; sem, <code>Shift+Tab</code> até <b>plan mode on</b>.</p>
       <p>Sai com: 3 perguntas no CONTEXTO.md.</p>
-      <div class="cx" data-p="s20" data-n="11" data-l="Clareza"></div>
     </div>
   </article>
 <article class="card" id="passo2">
     <div class="card-h"><h2>Brainstorm · Os dados</h2><span class="s">que dado responde cada pergunta?</span></div>
     <div class="card-b">
+      <p>Peça: <i>"pra cada pergunta, que dado eu preciso, de onde ele vem e de quanto em quanto tempo muda. Olhe a planilha da pasta dados e desenhe as tabelas numa página. Grave o mapa no CONTEXTO.md."</i></p>
       <p>Sai com: o mapa dos dados (tabelas e colunas).</p>
       <p class="nota">Não trouxe planilha? Baixe uma de exemplo e solte na pasta <code>dados</code>.</p>
       <div class="baixar"><button type="button" class="copiar bx" data-x="vendas">Vendas (.xlsx)</button><button type="button" class="copiar bx" data-x="estoque">Estoque (.xlsx)</button><button type="button" class="copiar bx" data-x="contas-a-pagar">Contas a pagar (.xlsx)</button></div>
-      <div class="cx" data-p="s21" data-n="12" data-l="Os dados"></div>
     </div>
   </article>
 <article class="card" id="passo3">
     <div class="card-h"><h2>Mockup, Spec e Revisão</h2><span class="s">primeiro o mockup, depois a spec, depois o segundo olhar</span></div>
     <div class="card-b">
-      <p>Fique em <b>auto mode on</b> (o mockup precisa gravar arquivo). Cole o 13, abra a página no navegador e diga o que entra e o que sai. Aprovou? Cole o 14.</p>
-      <div class="cx" data-p="s22" data-n="13" data-l="A proposta: mockup"></div>
-      <div class="cx" data-p="s23" data-n="14" data-l="A proposta: spec e LEIAME"></div>
+      <p>Fique em <b>auto mode on</b> (o mockup precisa gravar arquivo). Peça o mockup, como no telão: <i>"antes da spec, faz um HTML só pra eu ver como seria a tela, com dado de exemplo"</i>. Abra a página no navegador e diga o que entra e o que sai. Aprovou? Peça a spec: <i>"agora escreve a spec.html: o que a tela mostra, de onde vem cada dado, a conta de cada número e como eu confiro. Não constrói nada ainda."</i></p>
       <p><b>O segundo olhar</b>: abra uma sessão nova e cole o 15. Quem escreveu não revisa.</p>
       <div class="cx" data-p="s24" data-n="15" data-l="O segundo olhar (sessão nova)"></div>
-      <p>Depois volte na primeira sessão e peça:</p>
-      <div class="cx" data-p="s24b" data-l="Corrigir a spec"></div>
+      <p>Depois volte na primeira sessão e peça pra corrigir a spec com a lista que o segundo olhar apontou.</p>
       <p class="nota">Sai com: mockup aprovado, spec.html revisada e o LEIAME.md.</p>
     </div>
   </article>
 <article class="card" id="passo4">
     <div class="card-h"><h2>Spec revisada? Comece a construir</h2><span class="s">a primeira tela, com o seu dado</span></div>
     <div class="card-b">
-      <p>Sessão nova, <code>Shift+Tab</code> até <b>auto mode on</b>. Cole o 16.</p>
-      <div class="cx" data-p="s25" data-n="16" data-l="Comece a construir"></div>
+      <p>Sessão nova, <code>Shift+Tab</code> até <b>auto mode on</b>. Peça: <i>"leia a spec.html e o CONTEXTO.md e construa só a primeira tela: uma página HTML lendo a planilha da pasta dados, sem instalar nada. No fim, me mostre a prova."</i></p>
       <p>Em seguida, cole o comando abaixo: ele só para quando a conta bater (precisa do auto mode on pra rodar sozinho). Quer ver onde está? <code>/goal</code> sem nada. Quer parar? <code>/goal clear</code>.</p>
       <div class="cx" data-p="goal" data-l="/goal" data-t="Comando"></div>
     </div>
@@ -588,29 +568,23 @@ code{overflow-wrap:anywhere}
       <p>Página em branco ou mensagem vermelha acontece com todo mundo. Não feche nada.</p>
       <ol class="passos">
         <li>Tire um print da tela ou copie a mensagem de erro inteira.</li>
-        <li>Cole no Claude, junto com o pedido abaixo.</li>
+        <li>Cole no Claude e peça: <i>"ache a causa, conserte e me mostre a prova de que resolveu"</i>.</li>
       </ol>
-      <div class="cx" data-p="erro" data-l="Quando der erro"></div>
       <p class="nota">Errou duas vezes no mesmo ponto? Veja "Errou duas vezes? /clear".</p>
     </div>
   </article>
 <article class="card" id="bonus">
     <div class="card-h"><h2>Já terminou? Escolha um bônus</h2><span class="s">bônus</span></div>
     <div class="card-b">
-      <p><b>Dois terminais</b>. Terminal 1: <code>/rename pedreiro</code> e cole o 17. Terminal 2, na mesma pasta: <code>/rename fiscal</code> e cole o 18.</p>
-      <div class="cx" data-p="s26" data-n="17" data-l="Dois terminais · pedreiro"></div>
-      <div class="cx" data-p="s27" data-n="18" data-l="Dois terminais · fiscal (só lê)"></div>
-      <p><b>A vistoria do seu sistema</b>: <a class="vai" href="#vistoria">cartão abaixo</a>, prompts 19 e 20.</p>
-      <p><b>Vire uma habilidade (skill)</b>: o método de hoje (Brainstorm → Mockup → Spec → Revisão) vira a sua receita pro próximo sistema.</p>
-      <div class="cx" data-p="s30" data-n="21" data-l="Vire uma habilidade (skill)"></div>
+      <p><b>Dois terminais</b>. Terminal 1: <code>/rename pedreiro</code> e peça: <i>"leia a spec e construa a primeira versão; ao fim de cada passo, salve uma versão e avise o @fiscal"</i>. Terminal 2, na mesma pasta: <code>/rename fiscal</code> e peça: <i>"quando o @pedreiro avisar, leia o que mudou, sem editar nada, e me diga o que ajustar"</i>.</p>
+      <p><b>A vistoria do seu sistema</b>: <a class="vai" href="#vistoria">cartão abaixo</a>.</p>
+      <p><b>Vire uma habilidade (skill)</b>: peça <i>"transforme os 4 passos de hoje (brainstorm, mockup, spec, revisão) numa habilidade chamada proposta-de-sistema"</i>. O método vira a sua receita pro próximo sistema.</p>
     </div>
   </article>
 <article class="card" id="vistoria">
     <div class="card-h"><h2>A vistoria do seu sistema</h2><span class="s">bônus · revisão e segurança</span></div>
     <div class="card-b">
-      <p>Confiança no número e segurança pra quando você subir pro GitHub e pro Supabase. Sessão nova pra cada um.</p>
-      <div class="cx" data-p="s28" data-n="19" data-l="Vistoria · o número bate"></div>
-      <div class="cx" data-p="s29" data-n="20" data-l="Vistoria · nenhuma chave"></div>
+      <p>Confiança no número e segurança pra quando você subir pro GitHub e pro Supabase. Sessão nova pra cada um: (1) <i>"escolha 3 números da tela e refaça a conta na planilha da pasta dados; me mostre lado a lado se bate"</i>; (2) <i>"procure nos arquivos desta pasta qualquer senha, chave ou token; só leia e me diga onde está"</i>.</p>
     </div>
   </article>
   <div class="bloco">Fechamento</div>
@@ -680,7 +654,7 @@ audit:`Faça uma auditoria de segurança, só de leitura, de tudo que roda junto
 cont:`claude -c`,
 usage:`/usage`,
 
-s17:"Crie o meu CLAUDE.md global (~/.claude/CLAUDE.md). Antes de escrever, me faça 2 perguntas, uma por vez: (1) meu nome e cargo; (2) o que a minha empresa vende e pra quem. Com as respostas, preencha o bloco \"Quem eu sou\" e copie o resto como está. Curto: tem que caber numa tela. No fim, me mostre o arquivo e explique em 3 linhas pra que ele serve.\n\n# Quem eu sou\n- (nome, cargo, empresa, o que vende e pra quem: preencha com as minhas respostas). Não sou programador.\n- Fale em português do Brasil, direto, sem jargão. Termo técnico? Explica entre parênteses.\n\n# Como eu quero que você trabalhe\n- Plano antes de executar. Uma etapa por vez. Me pergunte se faltar informação.\n- Proposta, plano ou comparação: além do texto, me mostre numa página HTML simples (sem instalar nada) e me diga como abrir no navegador. Eu decido olhando.\n- Terminou? Me mostra a prova: o número conferido ou o print.\n- Tudo que você entregar (página, código, arquivo): me explique em até 3 linhas o que faz e por quê, como se eu tivesse 10 anos.\n- Quando eu disser \"salva o contexto\": atualize o CONTEXTO.md da pasta (o que é, onde parou, próximo passo). Faça isso também ao fim de cada etapa ou quando o contexto passar de 45%.\n- Salve uma versão (commit) ao fim de cada etapa. Nunca apague arquivo sem me perguntar.\n\n# Onde cada coisa mora\n- Código e sistema: numa pasta local em Documentos, que é um clone de um repositório no GitHub. Nunca dentro do Google Drive (a sincronização estraga o Git).\n- Textos .md (planta, contexto, memória): podem ficar no Google Drive, na pasta \"Meu Claude\".\n- Chaves e senhas: só no arquivo .env, que nunca sobe pro GitHub.\n\n# O que não fazer\n- Não instale nada sem me avisar o que é e pra quê.\n- Não construa o que eu não pedi. Pronto = versão 1. Melhorar vem depois.",
+s17:"Monte o meu CLAUDE.md global (~/.claude/CLAUDE.md). Se ele já existir, me mostre o que tem e só acrescente o que falta, sem apagar nada. Antes de escrever, me faça 2 perguntas, uma por vez: (1) meu nome e cargo; (2) o que a minha empresa vende e pra quem. Com as respostas, preencha o bloco \"Quem eu sou\" e copie o resto como está. Curto: tem que caber numa tela. No fim, me mostre o arquivo e explique em 3 linhas pra que ele serve.\n\n# Quem eu sou\n- (nome, cargo, empresa, o que vende e pra quem: preencha com as minhas respostas). Não sou programador.\n- Fale em português do Brasil, direto, sem jargão. Termo técnico? Explica entre parênteses.\n\n# Como eu quero que você trabalhe\n- Plano antes de executar. Uma etapa por vez. Me pergunte se faltar informação.\n- Proposta, plano ou comparação: além do texto, me mostre numa página HTML simples (sem instalar nada) e me diga como abrir no navegador. Eu decido olhando.\n- Terminou? Me mostra a prova: o número conferido ou o print.\n- Tudo que você entregar (página, código, arquivo): me explique em até 3 linhas o que faz e por quê, como se eu tivesse 10 anos.\n- Quando eu disser \"salva o contexto\": atualize o CONTEXTO.md da pasta (o que é, onde parou, próximo passo). Faça isso também ao fim de cada etapa ou quando o contexto passar de 45%.\n- Se esta pasta tiver Git, salve uma versão (commit) ao fim de cada etapa. Nunca apague arquivo sem me perguntar.\n\n# Onde cada coisa mora\n- Código e sistema: numa pasta local em Documentos, que é um clone de um repositório no GitHub. Nunca dentro do Google Drive (a sincronização estraga o Git).\n- Textos .md (planta, contexto, memória): podem ficar no Google Drive, na pasta \"Meu Claude\".\n- Chaves e senhas: só no arquivo .env, que nunca sobe pro GitHub.\n\n# O que não fazer\n- Não instale nada sem me avisar o que é e pra quê.\n- Não construa o que eu não pedi. Pronto = versão 1. Melhorar vem depois.",
 s18:"Crie o CLAUDE.md desta pasta. Antes, me faça 3 perguntas, uma por vez: (1) que pergunta este sistema tem que responder (a dor que me trouxe aqui); (2) quem vai usar; (3) que planilha eu tenho com esses dados e de onde ela sai. Com as respostas, preencha o modelo abaixo. Crie a pasta dados/ e me diga onde colocar a planilha. Depois crie o CONTEXTO.md (o que é esta obra, onde parou, próximo passo) e marque \"versão 1\". Curto: cada arquivo cabe numa tela. No fim, me mostre os dois arquivos e explique em 3 linhas.\n\n# Esta obra\n- Sistema e a pergunta que ele responde: (preencha com a minha resposta).\n- Dono: eu. Quem usa: (preencha com a minha resposta).\n- As regras do meu CLAUDE.md global valem aqui.\n\n# Os dados\n- Fonte: a planilha em dados/ (nome, de onde sai, aba e colunas que importam: preencha com a minha resposta; confira quando ela estiver na pasta).\n- Número de verdade = o da planilha. Toda tela tem que bater com ela.\n\n# Como construir aqui\n- Versão 1: uma página HTML só, lendo a planilha da pasta dados. Sem instalar nada.\n- Antes de cada etapa: plano. Depois: prova (número ou print) e \"salva o contexto\".\n- Chave de serviço (quando tiver): só no .env.\n\n# Onde parou\n- Ver CONTEXTO.md.",
 s19:"/statusline mostre o modelo, quanto do contexto já encheu (com uma barrinha) e quanto da cota de 5 horas eu já usei; fique amarelo acima de 45%",
 plugin:"Instale o plugin superpowers da loja oficial da Anthropic (claude-plugins-official) usando o comando `claude plugin install` no terminal. Se a loja não estiver cadastrada, cadastre primeiro. Quando terminar, me avise e me lembre do que eu preciso fazer pra ativar.",
